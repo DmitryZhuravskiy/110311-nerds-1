@@ -8,20 +8,22 @@
   </head>
   <body>
     <header class="main-header">
-      <section class="container clearfix">
-        <a class="index-logo" href="#"><img src="img/nerds-logo.png" width="160" height="65" alt="Nerds"></a>
-        <nav class="main-navigation">
-          <ul class="navigation">
-            <li><a href="#">Студия</a></li>
-            <li><a href="#">Клиенты</a></li>
-            <li><a href="inner.html">Магазин</a></li>
-            <li><a href="#">Контакты</a></li>
-          </ul>
-        </nav>
-        <nav class="basket">
-          <a href="#"><img src="img/basket-icon.png" width="15" height="15">Корзина</a>
-        </nav>
-      </section>
+      <nav class="main-navigation">
+        <a class="index-logo" href="#">
+          <img src="img/nerds-logo.png" width="160" height="65" alt="Nerds">
+        </a>
+        <ul class="site-navigation">
+          <li><a href="#">Студия</a></li>
+          <li><a href="#">Клиенты</a></li>
+          <li><a href="inner.html">Магазин</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+        <ul class="user-navigation">
+          <li class="basket-link">
+            <a href="#"><img src="img/basket-icon.png" width="15" height="15">Корзина</a>
+          </li>
+        </ul>
+      </nav>
 
       <section class="slider">
         <input type="radio" id="btn-1" name="toggle" checked>
@@ -51,8 +53,10 @@
         </section>
       </section>
     </header>
-    <main>    
+    <main>
+      <h1 class="visually-hidden">Веб-студия "Nerds"</h1>    
       <section class="catalog container clearfix">
+        <h2 class="visually-hidden">Каталог</h2>
         <article class="website">
           <img src="img/website-illustration.jpg" width="300" height="146">
           <h3>ВЕБ-САЙТЫ</h3>
@@ -74,6 +78,7 @@
       </section>
 
       <section class="who-we-are">
+        <h2 class="visually-hidden">О нас</h2>
         <article class="about-us">
           <p><b>Мы - маленькая, но гордая дизайн-студия из Краснодара.</b></p>
           <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
@@ -118,6 +123,7 @@
 
     <footer class="clearfix">
 	    <section class="map footer-contacts clearfix">
+        <h2 class="visually-hidden">Наш адрес</h2>
         <img src="img/map.jpg" width="1200" height="416">
         <span class="market">
 	        <img src="img/map-marker.png" width="231" height="190">
@@ -130,6 +136,7 @@
         </div>   
       </section>
       <section class="footer-social container clearfix">
+        <h2 class="visually-hidden">Мы в социальный сетях</h2>
         <article class="footer-links">
           <a class="social-btn social-btn-vk" href="#">
             <img class="vk simbols" src="img/vk-icon.png" width="26px" height="15px" alt="vkontakte"></a>
