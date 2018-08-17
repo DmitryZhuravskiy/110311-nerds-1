@@ -20,7 +20,7 @@
         </ul>
         <ul class="user-navigation">
           <li class="basket-link">
-            <a href="#"><img src="img/cart-icon.svg" width="15" height="15">Корзина</a>
+            <a class="login-link" href="#"><img src="img/cart-icon.svg" width="15" height="15">Корзина</a>
           </li>
         </ul>
       </nav>
@@ -128,22 +128,22 @@
         <span class="market">
 	        <img src="img/map-marker.png" width="231" height="190">
 	      </span>
-        <div class="contacts">
+        <article class="contacts">
             <h3>NЁRDS DESIGN STUDIO</h3>
             <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
             <p>тел. +7 (812) 275-75-75</p>
             <a class="write-us login" href="#login">Напишите нам</a><br>
-        </div>   
+        </article>   
       </section>
       <section class="footer-social container clearfix">
         <h2 class="visually-hidden">Мы в социальный сетях</h2>
         <article class="footer-links">
           <a class="social-btn social-btn-vk" href="#">
-            <img class="vk simbols" src="img/vk-icon.svg" width="26px" height="15px" alt="vkontakte"></a>
+            <img class="vk simbols" src="img/vk-icon.svg" width="26px" height="15px" alt="vkontakte" aria-label="Мы в вконтакте"></a>
           <a class="social-btn social-btn-fb" href="#">
-            <img class="simbols fb" src="img/fb-icon.svg" width="12px" height="22px" alt="facebook"></a>
+            <img class="simbols fb" src="img/fb-icon.svg" width="12px" height="22px" alt="facebook" aria-label="Мы в facebook"></a>
           <a class="social-btn social-btn-inst" href="https://www.instagram.com/">
-            <img class="inst simbols" src="img/insta-icon.svg" width="21px" height="21px" alt="instagram"></a>
+            <img class="inst simbols" src="img/insta-icon.svg" width="21px" height="21px" alt="instagram" aria-label="Мы в instagram"></a>
         </article>
         <article class="friendship-and-profit">
           <p><b>Давайте дружить, это выгодно!<br></b></p>
@@ -152,28 +152,29 @@
       </section>
     </footer>
 
-    <div class="modal-content">
-      <div class="overlay"></div>
-      <button class="modal-content-close" type="button" title="Закрыть"><img src="img/close-cross.svg" alt="Close">Закрыть</button>
+    <section class="modal-content">
+      <h2 class="visually-hidden">Ваше сообщение</h2>
+      <p class="visually-hidden"><b>Напишите нам</b></p>
       <form class="login-form" action="https://" method="post">
-        <div class="name"> 
+        <p class="name"> 
           <label><h2>Ваше имя:</h2>
             <input type="text" name="login" placeholder="Имя Фамилия">
           </label>
-        </div>
-        <div class="mail"> 
+        </p>
+        <p class="mail"> 
           <label><h2>Ваш e-mail:</h2>
             <input type="text" name="email" placeholder="email.example.com">
           </label><br>
-        </div>
-        <div class="letter-txt"> 
+        </p>
+        <p class="letter-txt"> 
           <label><h2>Текст письма:</h2>
 	          <input type="text" name="letter-text" placeholder="В свободной форме">
           </label><br>
-        </div>
+        </p>
         <button class="exit" type="submit" title="Отправить">Отправить</button>
       </form>
-    </div>
+      <button class="modal-content-close" type="button" title="Закрыть"><img src="img/close-cross.svg" alt="Close">Закрыть</button>
+    </section>
     <script src="js/script.js"></script>
   </body>
 </html>
