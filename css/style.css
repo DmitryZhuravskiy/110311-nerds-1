@@ -1,0 +1,1230 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Нёрдс</title>
+  </head>
+  <body>
+
+   /** Допустимые общие стили **/
+
+  html, body {
+    min-width: 2250px;
+    min-height: 1200px;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #283136;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "Roboto Regular", "Arial", sans-serif;
+    box-sizing: border-box;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  /** Стили для страницы index.html **/
+  /** Шапка сайта **/
+
+  .main-header {
+    background-color: #eeeeee;
+  }
+
+  .index-logo {
+    width: 160px;
+    height: 65px;
+  }
+
+  .index-logo:hover {
+    opacity: 0.8;
+  }
+
+  .index-logo:active {
+    opacity: 0.3;
+  }
+
+  .main-navigation ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0;
+  }
+
+  .main-navigation li a {
+    margin: 0;
+    color: #000000;
+    font-family: "Roboto Medium";
+    font-size: 16px;
+    line-height: 30px;
+    text-transform: uppercase;
+  }
+
+  .main-navigation a:hover,
+  .user-navigation a:hover {
+    color: #fb565a;
+  }
+
+  .main-navigation a:active,
+  .user-navigation a:active {
+    color: #a6a6a6;
+  } 
+
+  .main-navigation .active,
+  .user-navigation .active {
+    border-bottom: 1px #fb565a solid;
+  }
+
+  /** Cлайдера в index.html **/
+
+  .slider {
+    position: relative;
+    width: 880px;
+    min-height: 310px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 310px;
+    background-repeat: no-repeat;
+    background-position: 100% 10px;
+    -webkit-transition: left 0.3s ease;
+    -moz-transition: left 0.3s ease;
+    transition: left 0.3s ease;
+  }
+
+  .slider input[type="radio"] {
+    display: none;
+  }
+
+  .slider-controls {
+    position: absolute;
+    bottom: 95px;
+    left: 50%;
+    z-index: 10;
+    width: 200px;
+    margin-left: -100px;
+    text-align: center;
+  }
+
+  .slider-controls label {
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    margin: 0 3px;
+    vertical-align: top;
+    background: #ffffff;
+    border: 3px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .slide h2 {
+    font-family: "Roboto Medium";
+    font-size: 55px;
+    line-height: 55px;
+    color: #000000;
+  }
+
+  .slide p {
+    font-weight: 500;
+    line-height: 22px;
+    color: #283136;
+  }
+
+  .slide a {
+    display: block;
+    width: 240px;
+    height: 50px;
+    line-height: 18px;
+    color: #ffffff;
+    text-transform: uppercase;
+    background: #fb565a;
+    border-radius: 2px;
+    vertical-align: middle;
+    text-align: center;
+  }
+
+  .slide a:hover {
+    background-color: #e74246;
+  }
+
+  .slide a:active {
+    background-color: #d7373b;
+    color: #e37376;
+    border-top: 3px #c13135 solid;
+  }  
+
+  .slide:nth-child(1) {
+    background-image: url("../img/slider-bg.png");
+  }
+
+  .slide:nth-child(2) {
+    background-image: url("../img/slider-bg-2.png");
+  }
+
+  .slide:nth-child(3) {
+    background-image: url("../img/slider-bg-3.png");
+  }
+
+  #btn-1:checked ~ .slides .slide:nth-child(1) {
+    left: 0;
+  }
+
+  #btn-1:checked ~ .slides .slide:nth-child(2),
+  #btn-1:checked ~ .slides .slide:nth-child(3) {
+    left: 880px;
+  }
+
+  #btn-2:checked ~ .slides .slide:nth-child(1) {
+    left: -880px;
+  }
+
+  #btn-2:checked ~ .slides .slide:nth-child(2) {
+    left: 0;
+  }
+
+  #btn-2:checked ~ .slides .slide:nth-child(3) {
+    left: -880px;
+  }
+
+  #btn-3:checked ~ .slides .slide:nth-child(1) {
+    left: -880px;
+  }
+
+  #btn-3:checked ~ .slides .slide:nth-child(2) {
+    left: -880px;
+  }
+
+  #btn-3:checked ~ .slides .slide:nth-child(3) {
+    left: 0;
+  }
+
+  #btn-1:checked ~ .slider-controls label[for="btn-1"],
+  #btn-2:checked ~ .slider-controls label[for="btn-2"],
+  #btn-3:checked ~ .slider-controls label[for="btn-3"] {
+    background: #c1c1c1;
+  }
+
+  /** "Веб-сайты - Приложения - Презентации" index.html **/
+
+  .catalog {
+  }
+
+  .catalog img {
+    width: 300px;
+    height: 146px;
+  }
+
+  .catalog h3 {
+    font-family: "Roboto Bold";
+    font-size: 24px;
+    line-height: 30px;
+    text-transform: uppercase;
+  }
+
+  .catalog p {
+    color: #283136;
+  }
+
+  .catalog button {
+    color: #ffffff;
+    font-family: "Roboto Medium";
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
+  }
+
+  .website button {
+    background-color: #fb565a;
+  }
+
+  .website button:hover {
+    background-color: #e74246;
+  }
+
+  .website button:active {
+    background-color: #d7373b;
+    color: #e37376;
+    border-top: 3px #9b2d30 solid;
+  }
+
+  .attachment button {
+    background-color: #00ca74;
+  }
+
+  .attachment button:hover {
+    background-color: #00bc6c;
+  }
+
+  .attachment button:active {
+    background-color: #00aa62;
+    color: #4dc491;
+    border-top: 3px #009958 solid;
+  }
+
+  .presentation button {
+    background-color: #efc84a;
+  }
+
+  .presentation button:hover {
+    background-color: #eab534;
+  }
+
+  .presentation button:active {
+    background-color: #e5a722;
+    color: #edc265;
+    border-top: 3px #ce961f solid;
+  }
+
+  .btn-label {
+    width: 160px;
+    min-height: 50px;
+    border-radius: 2px;
+  }
+
+  /** "Мы - гордая студия из Краснодара" index.html **/
+
+  .who-we-are {
+  }
+
+  .about-us {
+  }
+
+  .about-us b {
+    font-family: "Roboto Medium";
+    font-size: 45px;
+    line-height: 45px;
+    color: #000000;
+  } 
+
+  .our-logo {
+  }
+
+  .we-can {
+  }
+
+  .we-can h4,
+  .how-we-cool h4 {
+    font-family: "Roboto Bold";
+    text-transform: uppercase;
+    color: #000000;
+  }
+
+  .we-can li {
+    position: relative;
+  }
+
+  .we-can li:before {
+    position: absolute;
+    content: "";
+    top: 18px;
+    left: 0px;
+    width: 25px;
+    height: 2px;
+    background-color: #fb565a;
+  }
+
+  .how-we-cool th {
+    font-family: "Robooto Bold";
+    font-size: 45px;
+    color: #000000;
+  }
+
+  .how-we-cool td {
+    line-height: 18px;
+  }
+
+  .our-logo img {
+    width: 360px;
+    height: 208px;
+  }
+
+  /** "Ссылки партнеров" index.html**/
+
+  .our-clients a {
+    opacity: 0.2;
+  }
+
+  .our-clients a:hover {
+    opacity: 1;
+  }
+
+  .our-clients a:active {
+    opacity: 0.1;
+  }
+
+  .htmlacademy img {
+    width: 199px;
+    height: 68px;
+  }
+
+  .borodinski img {
+    width: 209px;
+    height: 90px;
+  }
+
+  .pink img {
+    width: 185px;
+    height: 52px;
+  }
+
+  .mishka img {
+    width: 173px;
+    height: 84px;
+  }
+
+  /** Footer **/
+  /** Карта index.html**/
+
+  footer {
+  }
+
+  .footer-contacts {
+    min-height: 416px;
+    margin: 0 auto;
+    min-width: 1200px;
+  }
+
+  .map {
+    position: relative;
+  }
+
+  .contacts {
+    position: absolute;
+    top: 88px;
+    left: 160px;
+    width: 250px;
+    background-color: #ffffff;
+    z-index: 2;
+    height: 240px;
+  } 
+  
+  .contacts h2,
+  .contacts p {
+    margin-left: 20px;
+  }
+
+  .contacts h2 {
+    margin-top: 30px;
+    font-family: "Roboto Bold";
+    line-height: 30px;
+    text-transform: uppercase;
+    color: #000000;
+  }
+
+  .contacts a {
+    display: inline-block;
+    width: 219px;
+    height: 50px;
+    line-height: 18px;
+    background-color: #fb565a;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 2px;
+  }
+
+  .contacts a:hover {
+    background-color: #e74246;
+  }
+
+  .contacts a:active {
+    background-color: #d7373b;
+    color: #e37376;
+    border-top: 3px #c13135 solid;
+  }
+
+  .market {
+    position: absolute;
+    top: 112px;
+    right: 150px;
+    width: 231px;
+    height: 190px;
+  }
+
+  /** Контакты **/
+
+  .footer-social {
+    position: relative;
+    min-height: 120px;
+    margin: 0 auto;
+    margin-top: 80px;
+  } 
+
+  .footer-links a {
+    width: 62px;
+    height: 62px; 
+    background: red;
+    -moz-border-radius: 31px;
+    -webkit-border-radius: 31px;
+    border-radius: 31px;
+    background-color: #e1e1e1;
+    position: absolute;
+    top: 20px;
+  }
+
+  .footer-links a:hover {
+    background-color: #fb565a;
+  }
+
+  .footer-links a:active {
+    background-color: #d6494d;
+  }
+
+  .social-btn-vk {
+    left: 0px;
+  }
+
+  .social-btn-fb {
+    left: 90px;
+  }
+
+  .social-btn-inst {
+    left: 180px;
+  }
+
+  .vk {
+    position: absolute;
+    left: 18px;
+    top: 23px;  
+  }
+
+  .fb {
+    position: absolute;
+    left: 25px;
+    top: 20px;  
+  }
+
+  .inst {
+    position: absolute;
+    left: 21px;
+    top: 21px;  
+  }
+
+  .social-btn:last-child {
+    margin-right: 0;
+  }
+
+  .friendship-and-profit {
+    float: left; 
+    width: 550px;
+    margin-left: 320px;
+    padding: auto 0px;
+  }
+
+  .friendship-and-profit b {
+    font-family: "Roboto Bold";
+    color: #000000;
+    font-size: 36px;
+    line-height: 36px;
+  }
+  /** Стили страницы inner.html **/
+  /** Шапка немного отличается **/
+  
+  .welcome-message {
+    font-family: "Roboto Medium";
+    font-size: 55px;
+    line-height: 55px;
+    color: #000000;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  /** Основное содержание магазина inner.html **/
+
+  .main-container {
+    width: 880px;
+    min-height: 1300px;
+    margin: 0 auto;
+  }
+
+  .choice-form {
+    float: left;
+    width: 240px;
+    min-height: 1050px;
+    margin-left: 0px;
+  }
+
+/** Стили ролика выборки цены inner.html **/
+
+  .range-filter {
+    margin-top: 65px;
+    width: 230px;
+  }
+
+  .range-controls {
+    position: relative;
+    height: 41px;
+    padding-top: 39px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background: #f1f1f1;
+  }
+
+  .range-controls h3 {
+    font-family: "Roboto Bold";
+    font-size: 18px;
+    line-height: 30px;
+    color: #000000;
+    text-transform: uppercase;
+  }  
+
+  .range-controls .scale {
+    height: 2px;
+    background: #d7dcde;
+  }
+
+  .range-controls .bar {
+    width: 70%;
+    height: 2px;
+    background: #00ca74;
+  }
+
+  .range-controls .toggle {
+    position: absolute;
+    top: 30px;
+    left: 0px;
+    width: 4px;
+    height: 4px;
+    cursor: pointer;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    background: #ababab;
+    box-shadow: 0 2px 1px 0 #cfcfcf;
+  }
+
+  .range-controls .toggle-min {
+    left: 50px;
+  }
+
+  .range-controls .toggle-max {
+    left: 110px;
+  }
+
+  /** Стили окон диапазона выборки цены inner.html **/
+
+  .price-controls {
+    font-size: 0;
+  }
+
+  .price-controls label {
+    font-size: 16px;
+    line-height: 22px;
+    text-transform: uppercase;
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 7px;
+    width: 30px;
+  }
+
+  .max-price {
+    text-align: right;
+  }
+
+  .max-price {
+    text-align: right;
+  }
+
+  .price-controls input[type=text],
+  .price-controls input[type=text] {
+    width: 50px;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .price-controls input {
+    font-size: 16px;
+    line-height: 22px;
+    text-transform: uppercase;
+    width: 60px;
+    margin-left: 10px;
+    padding: 8px 10px;
+    text-align: center;
+    color: #283136;
+    border: none;
+    border-radius: 5px;
+    background: #f1f1f1;
+  }
+
+  /** Стили для выбора типа сетки inner.html **/
+
+  .web-kind, .differences, .btn-show {
+    margin-top: 40px;
+    margin-left: 0px;
+  }
+
+  .web-kind h3,
+  .differences h3 {
+    font-family: "Roboto Bold"
+    font-size: 18px;
+    line-height: 30px;
+    color: #000000;
+    text-transform: uppercase;
+  }
+
+  .web-kind p,
+  .differences p {
+    position: absolute;
+    left: 35px;
+    top: -13px;
+    line-height: 20px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #283136;
+  }
+
+  .web-kind input[type="radio"] {
+    opacity: 0;
+    width: 0;
+    margin: 0;
+  }
+
+  .web-kind label[for="button-1"], 
+  .web-kind label[for="button-2"],
+  .web-kind label[for="button-3"] {
+    position: relative;
+    display: block;
+    margin-bottom: 0px;
+    padding-left: 0px;
+    width: 25px;
+    height: 25px;
+    background:  url("../img/radio-off.svg") no-repeat;
+    cursor: pointer;
+    padding-bottom: 0;  
+  }
+
+  input:checked + label[for="button-1"],
+  input:checked + label[for="button-2"],
+  input:checked + label[for="button-3"] {
+    display: block;
+    width: 25px;
+    height: 25px;
+    background:  url("../img/radio-on.svg") no-repeat;
+  }
+
+  input[type="checkbox"] {
+    opacity: 0;
+    width: 0;
+    margin: 0;
+  }
+
+  .differences label[for="kind-of-items-1"],
+  .differences label[for="kind-of-items-2"],
+  .differences label[for="kind-of-items-3"],
+  .differences label[for="kind-of-items-4"],
+  .differences label[for="kind-of-items-5"] {
+    display: block;
+    position: relative;
+    margin-bottom: 0px;
+    padding-left: 40px;
+    width: 23px;
+    height: 23px;
+    background:  url("../img/checkbox-off.svg") no-repeat;
+    cursor: pointer;
+    padding-bottom: 0px;
+  }
+
+  input:checked + label[for="kind-of-items-1"],
+  input:checked + label[for="kind-of-items-2"],
+  input:checked + label[for="kind-of-items-3"],
+  input:checked + label[for="kind-of-items-4"],
+  input:checked + label[for="kind-of-items-5"] {
+    display: block;
+    width: 27px;
+    height: 23px;
+    background:  url("../img/checkbox-on.svg") no-repeat;
+  }
+
+  fieldset {
+    border: 0px green solid;
+  }
+  
+  .btn-show {
+    display: block;
+    width: 260px;
+    height: 50px;
+    font-family: "Roboto Medium";
+    line-height: 18px;
+    background: #eeeeee;
+    color: #000000;
+    text-transform: uppercase;
+  }
+
+  .btn-show:hover {
+    background-color: #dfdfdf;
+  }
+
+  .btn-show:active {
+    background-color: #d5d5d5;
+    border-top: 3px #bfbfbf solid;
+    color: #959595;
+  }
+
+  /** Стили галереи макетов inner.html **/
+
+  .galery {
+    width: 600px;
+    min-height: 1100px;
+    margin-left: 280px;
+    padding: 0px;
+  }
+
+   /** Стили для панели сортировки **/
+
+  .sorting ul, .sorting li {
+    margin: 0;
+    padding: 0;
+  }
+
+  .sorting {
+    position: relative;
+  }
+
+  .sorting h3 {
+    font-family: "Roboto Bold";
+    font-size: 18px;
+    line-height: 18px;
+    color: #000000;
+  }
+
+  .sorting li {
+    margin-left: 40px;
+    font-size: 12px;
+    line-height: 18px;
+    padding: 0;
+    border-bottom: 1px #00ca74 dotted;
+  }
+
+  .sorting li a {
+    color: #000000;
+    opacity: 0.3;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .sorting li a:hover {
+    opacity: 0.6;
+  }
+
+  .sorting--active,
+  .sorting li a:active {
+    opacity: 1;
+  }
+
+  .btn-go {
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 4px;
+    right: 0px;
+  }
+
+  .go-bottom {
+  	border-left: 5px solid transparent;
+  	border-right: 5px solid transparent;
+  	border-top: 10px solid #a6a6a6;
+    right: 17px;
+    opacity: 0.2;
+  }
+
+  .go-bottom:hover {
+  	border-top: 10px solid #a6a6a6;
+    opacity: 1;
+  }
+
+  .go-bottom:active {
+  	border-top: 10px solid #000000;
+    opacity: 1;
+  }
+
+  .go-top {
+  	border-left: 5px solid transparent;
+  	border-right: 5px solid transparent;
+  	border-bottom: 10px solid #a6a6a6;
+    right: 0px;
+    opacity: 0.2;
+  }
+
+  .go-top:hover {
+	  border-bottom: 10px solid #a6a6a6;
+    opacity: 1;
+  }
+
+  .go-top:active {
+	  border-bottom: 10px solid #000000;
+    opacity: 1;
+  }
+
+   /** Стили галереи inner.html **/
+
+  .box {
+    display: inline-block;
+    position: relative;
+    width: 360px;
+    height: 618px;
+    background-color: #ffffff;
+    margin-bottom: 60px;
+    padding-left: 0;
+    margin-left: 0;
+    border: 1px #e5e5e5 solid;
+  }
+
+  .box:hover {
+    box-shadow: 0 0 15px 6px #000101;
+  }
+
+  .box:hover > .sticker {
+    display: block;
+  }
+
+  .sticker {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    bottom: 20px;
+    width: 360px;
+    height: 230px;
+    background-color: #eeeeee;
+    display: none;
+  }
+
+  .sticker h3 {
+    font-family: "Roboto Bold";
+    font-size: 18px;
+    line-height: 30px;
+    color: #000000;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .sticker p {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 18px;
+  }
+
+  .sticker button {
+    display: block;
+    width: 200px;
+    height: 50px;
+    background-color: #fb565a;
+    color: #ffffff;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 2px;
+  }
+
+  .sticker a {
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+  }
+
+  .sticker button:hover {
+    background-color: #e74246;
+  }
+
+  .sticker button:active {
+    background-color: #d7373b;
+    border-top: 3px #c13135 solid;
+  }
+
+   /** Панель навигации по страницам галереи inner.html **/
+
+  .page-number {
+    width: 500px;
+    min-height: 40px;
+    margin: 80px auto;
+    margin-left: 290px;
+  }
+   
+  .page-number li {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: #eeeeee;
+    color: #000000;
+    margin-right: 10px;
+    border-radius: 2px; 
+  }
+
+  .page-number a {
+    font-family: "Roboto Medium";
+    line-height: 18px;
+    color: #000000;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .page-number ul li:last-child {
+    padding: 0 79px;
+    margin-right: 0; 
+  }
+
+  ul .page-active {
+    background-color: #ffffff;
+    color: #000000;
+    border: 3px #dbdbdb solid;
+    box-sizing: border-box;
+  }
+
+  .page-number li:hover {
+    background-color: #dfdfdf;
+  }
+
+  .page-number li:active {
+    background-color: #d5d5d5;
+    border-top: 3px #bfbfbf solid;
+    box-sizing: border-box;
+  }
+
+  .page-number li:active a {
+    opacity: 0.3;
+  }
+
+  .page-number li:last-child {
+    width: 260px;
+  }
+
+  /** Скрытая форма **/
+
+  .modal-content {
+    width: 470px;
+    height: 300px;
+    background-color: #ffffff;
+    padding: 50px 80px;
+    margin: 0 auto;
+    position: relative;
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+    display: none;
+    position: fixed;
+    bottom: 275px;
+    left: 630px;
+    z-index: 50;
+  }
+
+  .modal-content-close {
+    position: absolute;
+    right: 90px;
+    top: 80px;
+    font-size: 0;
+    border: 0;
+    cursor: pointer;
+  }
+
+  .modal-content p b {
+    font-family: "Roboto Medium";
+    font-size: 45px;
+    line-height: 45px;
+    color: #000000;
+    padding: 0;
+    margin: 0;
+  }
+
+  .modal-content h3 {
+    font-family: "Roboto Bold";
+    line-height: 18px;
+    color: #000000;
+  }
+
+  .login-form input[type=text] {
+    width: 360px;
+    height: 50px;
+    line-height: 18px;
+  }
+
+  .login-form textarea {
+    width: 760px;
+    height: 118px;
+  }
+
+  .login-form input[type=text],
+  .login-form textarea {
+    border: 2px #d7dcde solid;
+    border-radius: 2px;
+  }
+
+  .exit {
+    margin-top: 48px;
+    width: 460px;
+    height: 38px;
+    background-color: #fb565a;
+    border-radius: 3px;
+    color: white;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .login-form input::placeholder,
+  .login-form textarea::placeholder {
+    line-height: 18px;
+    padding-left: 15px;
+    color: #000000;
+    opacity: 0.5;
+  }
+
+  .login-form input[type=text]:hover, 
+  .login-form textarea:hover {
+    border-color: #b4b9bb;
+  }
+
+  .login-form input[type=text]:focus,
+  .login-form textarea:focus {
+    border-color: #000000;
+  }
+
+  .login-form input[type=text]:focus::placeholder,
+  .login-form textarea:focus::placeholder {
+    opacity: 1;
+  }
+
+  .login-form input[type=text]:invalid,
+  .login-form textarea:invalid {
+    border-color: #e74246;
+  }
+
+  .login-form input[type=text]:invalid::placeholder,
+  .login-form textarea:invalid::placeholder {
+    color: #e74246;
+    opacity: 1;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.05);
+    z-index: -1;
+  }
+
+  .modal-content-show {
+    display: block;
+    animation: bounce 0.6s;
+    z-index: 20;
+  }
+
+  .modal-error {
+    animation: shake 0.6s;
+  }
+
+  .sprite {
+    background-image: url("../img/spritesheet.png");
+    background-repeat: no-repeat;
+    display: block;
+  }
+
+  .sprite--icon-basket {
+    width: 15px;
+    height: 15px;
+    background-position: -10px -10px;
+  }
+
+  .sprite--icon-basket-active {
+    width: 15px;
+    height: 15px;
+    background-position: -10px -45px;
+  }
+
+  .sprite--icon-basket-hover {
+    width: 15px;
+    height: 15px;
+    background-position: -10px -80px;
+  }
+
+  .sprite--icon-basket-visited {
+    width: 15px;
+    height: 15px;
+    background-position: -10px -115px;
+  }
+
+  /* ВЕРСТКА СКРЫТОЙ ФОРМЫ */
+
+  @-webkit-keyframes bounce {
+    0% {
+        transform: translateX(-2000px);
+    }
+    70% {
+        transform: translateX(30px);
+    }
+    90% {
+        transform: translateX(-10px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+  }
+
+  @keyframes bounce {
+    0% {
+        transform: translateY(-2000px);
+    }
+    70% {
+        transform: translateY(30px);
+    }
+    90% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+  }
+
+  @-webkit-keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-10px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(10px);
+    }
+  }
+
+  @keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-10px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(10px);
+    }
+  }
+
+  ::-webkit-input-placeholder {
+    color: black;
+  }
+
+  ::-moz-placeholder {
+    color: black;
+  }
+  /* Firefox 19+ */
+
+  :-moz-placeholder {
+    color: black;
+  }
+  /* Firefox 18- */
+
+  :-ms-input-placeholder {
+    color: black;
+  }
+  </body>
+</html>

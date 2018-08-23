@@ -2,8 +2,9 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:500,300"      rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
     <title>HTML Academy: Нёрдс</title>
   </head>
   <body>
@@ -60,36 +61,33 @@
         </fieldset>
         <fieldset class="differences">
           <h3>Особенности:</h3>
-          <label class="choose"  for="kind-of-items-1"><p>Слайдер</p></label>
+          <label for="kind-of-items-1"><p>Слайдер</p></label>
           <input type="checkbox" name="slider" id="kind-of-items-1"checked><br>
 
-          <label class="choose" for="kind-of-items-2"><p>Блок преимуществ</p></label>
+          <label for="kind-of-items-2"><p>Блок преимуществ</p></label>
           <input type="checkbox" name="advantage-block" id="kind-of-items-2"><br>
 
-
-          <label class="choose" class="ch" for="kind-of-items-3"><p>Новости</p></label>
+          <label for="kind-of-items-3"><p>Новости</p></label>
           <input type="checkbox" name="news" id="kind-of-items-3" checked><br>
 
-          <label class="choose" for="kind-of-items-4"><p>Галерея</p></label>
+          <label for="kind-of-items-4"><p>Галерея</p></label>
           <input type="checkbox" name="galery" id="kind-of-items-4"><br>
 
-          <label class="choose" for="kind-of-items-5"><p>Корзина</p></label>
+          <label for="kind-of-items-5"><p>Корзина</p></label>
           <input type="checkbox" name="backet" id="kind-of-items-5">
         </fieldset>
-        <div>
-          <button class="btn-show" type="submit">Показать</button>
-        </div>
+        <button class="btn-show" type="submit">Показать</button>
       </form>
 
       <section class="galery">
         <nav class="sorting">
+          <h3>Сортировать:</h3>
           <ul>
-            <li class="sort"><a>Сортировать:</a></li>
-            <li><a class="so" href="#">По цене</a></li>
+            <li><a class="so sorting--active" href="#">По цене</a></li>
             <li><a class="so" href="#">По типу</a></li>
             <li><a class="so" href="#">По названию</a></li>
            	<a class="go-bottom btn-go" href="#"><img src="img/icon-down-dir.svg" alt=""></a>
-          	<a class="go-top btn-go" href="#"><img src="img/icon-up-dir.svg" alt=""></a>     
+          	<a class="go-top btn-go" href="#"><img src="img/icon-up-dir.svg" alt=""></a> 
     	    </ul>
         </nav>
         <ul class="macket-description">
@@ -189,21 +187,21 @@
 
     <section class="modal-content">
       <h2 class="visually-hidden">Ваше сообщение</h2>
-      <p class="visually-hidden"><b>Напишите нам</b></p>
+      <p><b>Напишите нам</b></p>
       <form class="login-form" action="https://" method="post">
         <p class="name"> 
-          <label><h2>Ваше имя:</h2>
+          <label><h3>Ваше имя:</h3>
             <input type="text" name="login" placeholder="Имя Фамилия">
           </label>
         </p>
         <p class="mail"> 
-          <label><h2>Ваш e-mail:</h2>
+          <label><h3>Ваш e-mail:</h3>
             <input type="text" name="email" placeholder="email.example.com">
           </label><br>
         </p>
         <p class="letter-txt"> 
-          <label><h2>Текст письма:</h2>
-            <input type="text" name="letter-text" placeholder="В свободной форме">
+          <label><h3>Текст письма:</h3>
+            <textarea type="text" name="letter-text" placeholder="В свободной форме"></textarea>
           </label><br>
         </p>
         <button class="exit" type="submit" title="Отправить">Отправить</button>

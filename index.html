@@ -2,8 +2,9 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:500,300"      rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
     <title>HTML Academy: Нёрдс</title>
   </head>
   <body>
@@ -13,7 +14,7 @@
           <img src="img/nerds-logo.svg" width="160" height="65" alt="Nerds">
         </a>
         <ul class="site-navigation">
-          <li><a href="#">Студия</a></li>
+          <li><a class="active" href="">Студия</a></li>
           <li><a href="#">Клиенты</a></li>
           <li><a href="inner.html">Магазин</a></li>
           <li><a href="#">Контакты</a></li>
@@ -36,17 +37,17 @@
         </div>
         <section class="slides">
           <article class="slide">
-            <h2 class="slide-title">Долго, дорого, скрупулезно</h2>
+            <h2>Долго, дорого, скрупулезно</h2>
             <p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
             <a class="btn" href="#">Узнать больше</a>
           </article>
           <article class="slide">
-            <h2 class="slide-title">Любим математику как никто другой</h2>
+            <h2>Любим математику как никто другой</h2>
             <p>Никакого креатива, только математические формулы для расчета идеальный пропорций.</p>
             <a class="btn" href="#">Узнать больше</a>
           </article>
           <article class="slide">
-            <h2 class="slide-title">Только ночь, только хардкор</h2>
+            <h2>Только ночь, только хардкор</h2>
             <p>Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
             <a class="btn" href="#">Узнать больше</a>
           </article>
@@ -61,19 +62,19 @@
           <img src="img/website-illustration.png" width="300" height="146">
           <h3>ВЕБ-САЙТЫ</h3>
           <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
-          <button class="btn but-label" type="submit" width="140" height="38">Заказать</button>
+          <button class="btn btn-label" type="submit">Заказать</button>
         </article>
         <article class="attachment">
           <img src="img/attachment-illustration.png" width="300" height="146">
           <h3>ПРИЛОЖЕНИЯ</h3>
           <p>Покорите топ-10 приложений в AppStore и Google Play</p>
-          <button class="btn but-label" type="submit" width="140" height="38">Заказать</button>
+          <button class="btn btn-label" type="submit">Заказать</button>
         </article>
         <article class="presentation">
           <img src="img/presentation-illustration.png" width="300" height="146">
           <h3>ПРЕЗЕНТАЦИИ<h3>
           <p>Вы даже не подозреваете? насколько вы изумительны!</p>
-          <button class="btn but-label" type="submit" width="140" height="38">Заказать</button>
+          <button class="btn btn-label" type="submit">Заказать</button>
         </article>
       </section>
 
@@ -131,7 +132,7 @@
         <article class="contacts">
             <h3>NЁRDS DESIGN STUDIO</h3>
             <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-            <p>тел. +7 (812) 275-75-75</p>
+            <p class="phone">тел. +7 (812) 275-75-75</p>
             <a class="write-us login" href="#login">Напишите нам</a><br>
         </article>   
       </section>
@@ -154,21 +155,21 @@
 
     <section class="modal-content">
       <h2 class="visually-hidden">Ваше сообщение</h2>
-      <p class="visually-hidden"><b>Напишите нам</b></p>
+      <p><b>Напишите нам</b></p>
       <form class="login-form" action="https://" method="post">
         <p class="name"> 
-          <label><h2>Ваше имя:</h2>
+          <label><h3>Ваше имя:</h3>
             <input type="text" name="login" placeholder="Имя Фамилия">
           </label>
         </p>
         <p class="mail"> 
-          <label><h2>Ваш e-mail:</h2>
+          <label><h3>Ваш e-mail:</h3>
             <input type="text" name="email" placeholder="email.example.com">
           </label><br>
         </p>
         <p class="letter-txt"> 
-          <label><h2>Текст письма:</h2>
-	          <input type="text" name="letter-text" placeholder="В свободной форме">
+          <label><h3>Текст письма:</h3>
+            <textarea type="text" name="letter-text" placeholder="В свободной форме"></textarea>
           </label><br>
         </p>
         <button class="exit" type="submit" title="Отправить">Отправить</button>
