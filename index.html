@@ -9,23 +9,23 @@
   </head>
   <body>
     <header class="main-header">
-      <nav class="main-navigation">
+      <nav class="main-navigation container">
         <a class="index-logo" href="#">
           <img src="img/nerds-logo.svg" width="160" height="65" alt="Nerds">
         </a>
         <ul class="site-navigation">
-          <li><a class="active" href="">Студия</a></li>
+          <li class="active"><a href="">Студия</a></li>
           <li><a href="#">Клиенты</a></li>
           <li><a href="inner.html">Магазин</a></li>
           <li><a href="#">Контакты</a></li>
         </ul>
         <ul class="user-navigation">
           <li class="basket-link">
-            <a class="login-link" href="#"><img src="img/cart-icon.svg" width="15" height="15">Корзина</a>
+            <a class="login-link" href="#">Корзина</a>
           </li>
         </ul>
       </nav>
-
+      <div class="container">
       <section class="slider">
         <input type="radio" id="btn-1" name="toggle" checked>
         <input type="radio" id="btn-2" name="toggle">
@@ -35,86 +35,94 @@
           <label for="btn-2"></label>
           <label for="btn-3"></label>
         </div>
-        <section class="slides">
+        <section class="slides container">
           <article class="slide">
             <h2>Долго, дорого, скрупулезно</h2>
             <p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
             <a class="btn" href="#">Узнать больше</a>
+            <img class="slide-picture1" src="img/slide1.png" width="698" height="413">
           </article>
           <article class="slide">
             <h2>Любим математику как никто другой</h2>
             <p>Никакого креатива, только математические формулы для расчета идеальный пропорций.</p>
             <a class="btn" href="#">Узнать больше</a>
+            <img class="slide-picture2" src="img/slide2.png" width="663" height="430">
           </article>
           <article class="slide">
             <h2>Только ночь, только хардкор</h2>
             <p>Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
             <a class="btn" href="#">Узнать больше</a>
+            <img class="slide-picture3" src="img/slide3.png" width="759" height="411">
           </article>
         </section>
       </section>
+    </div>
     </header>
-    <main>
+    <main class="container">
       <h1 class="visually-hidden">Веб-студия "Nerds"</h1>    
-      <section class="catalog container clearfix">
+      <section class="catalog">
         <h2 class="visually-hidden">Каталог</h2>
         <article class="website">
           <img src="img/website-illustration.png" width="300" height="146">
           <h3>ВЕБ-САЙТЫ</h3>
           <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
-          <button class="btn btn-label" type="submit">Заказать</button>
+          <a type="submit">Заказать</a>
         </article>
         <article class="attachment">
           <img src="img/attachment-illustration.png" width="300" height="146">
           <h3>ПРИЛОЖЕНИЯ</h3>
           <p>Покорите топ-10 приложений в AppStore и Google Play</p>
-          <button class="btn btn-label" type="submit">Заказать</button>
+          <a type="submit">Заказать</a>
         </article>
         <article class="presentation">
           <img src="img/presentation-illustration.png" width="300" height="146">
-          <h3>ПРЕЗЕНТАЦИИ<h3>
+          <h3>ПРЕЗЕНТАЦИИ</h3>
           <p>Вы даже не подозреваете? насколько вы изумительны!</p>
-          <button class="btn btn-label" type="submit">Заказать</button>
+          <a type="submit">Заказать</a>
         </article>
       </section>
 
       <section class="who-we-are">
         <h2 class="visually-hidden">О нас</h2>
-        <article class="about-us">
-          <p><b>Мы - маленькая, но гордая дизайн-студия из Краснодара.</b></p>
-          <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
-        </article>
+        <div class="who-we-are__top-container">
+          <article class="about-us">
+            <p><b>Мы - маленькая, но гордая дизайн-студия из Краснодара.</b></p>
+            <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
+          </article>
 
-        <article class="our-logo">
-          <img src="img/nerds-illustration.png" width="360" height="208">
-        </article>
+          <article class="our-logo">
+            <img src="img/nerds-illustration.png" width="360" height="208">
+          </article>
+        </div>
 
-        <article class="we-can">
-          <h4>Выполняем заказы на разработку:</h4>
-          <ul>
-            <li>Веб-сайтов любой сложности</li>
-            <li>Мобильных приложений для IOS и Android</li>
-            <li>Слайдшоу и видео для корпоративных презентаций</li>
-          </ul>
-        </article>
+        <div class="who-we-are__bottom-container">
+          <article class="we-can">
+            <h4>Выполняем заказы на разработку:</h4>
+            <ul>
+              <li>Веб-сайтов любой сложности</li>
+              <li>Мобильных приложений для IOS и Android</li>
+              <li>Слайдшоу и видео для корпоративных презентаций</li>
+            </ul>
+          </article>
 
-        <article class="how-we-cool">
-          <h4>С 2004 года любим точность во всем:</h4>
-          <table>
-            <tr>
-              <th>146<sup>%</sup></th>
-              <th>100<sup>%</sup></th>
-              <th>50<sup>%</sup></th>
-            </tr>
-            <tr>
-              <td>Уровень самоотдачи</td>
-              <td>Соблюдение сроков</td>
-              <td>Минимальная предоплата</td>
-            </tr>
-          </table>
-        </article>
+          <article class="how-we-cool">
+            <h4>С 2004 года любим точность во всем:</h4>
+            <table>
+              <tr>
+                <th>146<sup>%</sup></th>
+                <th>100<sup>%</sup></th>
+                <th>50<sup>%</sup></th>
+              </tr>
+              <tr>
+                <td>Уровень самоотдачи</td>
+                <td>Соблюдение сроков</td>
+                <td>Минимальная предоплата</td>
+              </tr>
+            </table>
+          </article>
+        </div>
       </section>
-      <section class="our-clients clearfix container">
+      <section class="our-clients">
         <a class="htmlacademy" href="#"><img src="img/htmlacademy-logo.png" width="199" height="68"></a>
         <a class="borodinski" href="#"><img src="img/borodinski-logo.png" width="209" height="90"></a>
         <a class="pink" href="#"><img src="img/pink-logo.png" width="185" height="52"></a>
@@ -123,7 +131,7 @@
     </main>
 
     <footer class="clearfix">
-	    <section class="map footer-contacts clearfix">
+	    <section class="map footer-contacts">
         <h2 class="visually-hidden">Наш адрес</h2>
         <img src="img/map.jpg" width="1200" height="416">
         <span class="market">
@@ -136,14 +144,14 @@
             <a class="write-us login" href="#login">Напишите нам</a><br>
         </article>   
       </section>
-      <section class="footer-social container clearfix">
+      <section class="footer-social container">
         <h2 class="visually-hidden">Мы в социальный сетях</h2>
         <article class="footer-links">
-          <a class="social-btn social-btn-vk" href="#">
+          <a class="social-btn-vk" href="#">
             <img class="vk simbols" src="img/vk-icon.svg" width="26px" height="15px" alt="vkontakte" aria-label="Мы в вконтакте"></a>
-          <a class="social-btn social-btn-fb" href="#">
+          <a class="social-btn-fb" href="#">
             <img class="simbols fb" src="img/fb-icon.svg" width="12px" height="22px" alt="facebook" aria-label="Мы в facebook"></a>
-          <a class="social-btn social-btn-inst" href="https://www.instagram.com/">
+          <a class="social-btn-inst" href="https://www.instagram.com/">
             <img class="inst simbols" src="img/insta-icon.svg" width="21px" height="21px" alt="instagram" aria-label="Мы в instagram"></a>
         </article>
         <article class="friendship-and-profit">

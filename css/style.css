@@ -9,7 +9,7 @@
    /** Допустимые общие стили **/
 
   html, body {
-    min-width: 2250px;
+    max-width: 1140px;
     min-height: 1200px;
     margin: 0;
     padding: 0;
@@ -29,14 +29,41 @@
     text-decoration: none;
   }
 
+  .container {
+    width: 1160px;
+    padding: 0 60px;
+    margin: 0 auto;
+  }
+
+  .visually-hidden {
+    visibility: hidden;
+    width: 0;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
   /** Стили для страницы index.html **/
   /** Шапка сайта **/
 
-  .main-header {
+  header {
+    display: block;
     background-color: #eeeeee;
+    margin: 0 auto;
+    margin-bottom: 80px;
+  }
+
+  .main-navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: transparent;
+    padding: 50px 0 18px 0;
   }
 
   .index-logo {
+    display: inline-block;
     width: 160px;
     height: 65px;
   }
@@ -51,7 +78,7 @@
 
   .main-navigation ul {
     margin: 0;
-    padding: 0;
+    padding: 13px 0;
     list-style: none;
     font-size: 0;
   }
@@ -80,27 +107,58 @@
     border-bottom: 1px #fb565a solid;
   }
 
+  .index-logo {
+    display: block;
+    align-self: flex-start;
+  }
+
+  .site-navigation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 55px 0;
+  }
+
+  .site-navigation li {
+    margin-right: 47px;
+  }
+
+  .site-navigation li:last-child {
+    margin-right: 0;
+  }
+
+  .user-navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-self: center;
+    width: 160px;
+  }
+
+  .login-link {
+    position: relative;
+  }
+
+  .login-link:before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 0;
+    right: 100px;
+    background-image: url("../img/cart-icon.svg");
+  }
+
   /** Cлайдера в index.html **/
 
   .slider {
+    display: block;
     position: relative;
-    width: 880px;
-    min-height: 310px;
-    margin: 0 auto;
+    width: 1160px;
+    min-height: 410px;
+    margin: 0;
     overflow: hidden;
-  }
-
-  .slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 310px;
-    background-repeat: no-repeat;
-    background-position: 100% 10px;
-    -webkit-transition: left 0.3s ease;
-    -moz-transition: left 0.3s ease;
-    transition: left 0.3s ease;
   }
 
   .slider input[type="radio"] {
@@ -129,23 +187,44 @@
     cursor: pointer;
   }
 
+  .slide {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 444px;
+    background-repeat: no-repeat;
+    background-position: 100% 0px;
+    -webkit-transition: left 0.3s ease;
+    -moz-transition: left 0.3s ease;
+    transition: left 0.3s ease;
+  }
+
   .slide h2 {
     font-family: "Roboto Medium";
     font-size: 55px;
     line-height: 55px;
     color: #000000;
+    width: 400px;
+    margin-bottom: 40px;
   }
 
   .slide p {
     font-weight: 500;
     line-height: 22px;
     color: #283136;
+    width: 400px;
+    margin-bottom: 40px;
   }
 
   .slide a {
     display: block;
     width: 240px;
-    height: 50px;
+    height: auto;
+    padding: 17px 50px;
     line-height: 18px;
     color: #ffffff;
     text-transform: uppercase;
@@ -165,16 +244,26 @@
     border-top: 3px #c13135 solid;
   }  
 
-  .slide:nth-child(1) {
-    background-image: url("../img/slider-bg.png");
+  .slide img {
+    position: absolute;
+    bottom: 0;
+    left: 412px;
   }
 
-  .slide:nth-child(2) {
-    background-image: url("../img/slider-bg-2.png");
+  .slide:first-child img {
+    width: 698px; 
+    height: 413px;
   }
 
-  .slide:nth-child(3) {
-    background-image: url("../img/slider-bg-3.png");
+  .slide:nth-of-type(2) img {
+    width: 663px;
+    height: 430px;
+  }
+
+  .slide:nth-of-type(3) img {
+    width: 759px;
+    height: 411px;
+    left: 400px;
   }
 
   #btn-1:checked ~ .slides .slide:nth-child(1) {
@@ -183,11 +272,11 @@
 
   #btn-1:checked ~ .slides .slide:nth-child(2),
   #btn-1:checked ~ .slides .slide:nth-child(3) {
-    left: 880px;
+    left: 1160px;
   }
 
   #btn-2:checked ~ .slides .slide:nth-child(1) {
-    left: -880px;
+    left: -1160px;
   }
 
   #btn-2:checked ~ .slides .slide:nth-child(2) {
@@ -195,15 +284,15 @@
   }
 
   #btn-2:checked ~ .slides .slide:nth-child(3) {
-    left: -880px;
+    left: -1160px;
   }
 
   #btn-3:checked ~ .slides .slide:nth-child(1) {
-    left: -880px;
+    left: -1160px;
   }
 
   #btn-3:checked ~ .slides .slide:nth-child(2) {
-    left: -880px;
+    left: -1160px;
   }
 
   #btn-3:checked ~ .slides .slide:nth-child(3) {
@@ -219,11 +308,17 @@
   /** "Веб-сайты - Приложения - Презентации" index.html **/
 
   .catalog {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px #eeeeee solid;
+    padding-bottom: 80px;
   }
 
   .catalog img {
     width: 300px;
     height: 146px;
+    margin-bottom: 30px;
   }
 
   .catalog h3 {
@@ -231,87 +326,110 @@
     font-size: 24px;
     line-height: 30px;
     text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 30px;
   }
 
   .catalog p {
     color: #283136;
+    width: 260px;
+    margin-top: 0;
+    margin-bottom: 40px;
   }
 
-  .catalog button {
+  .catalog a {
+    display: inline-block;
     color: #ffffff;
     font-family: "Roboto Medium";
     font-size: 16px;
     line-height: 18px;
+    height: auto;
+    padding: 17px 40px;
     text-transform: uppercase;
+    border-radius: 2px;
   }
 
-  .website button {
+  .website a {
     background-color: #fb565a;
   }
 
-  .website button:hover {
+  .website a:hover {
     background-color: #e74246;
   }
 
-  .website button:active {
+  .website a:active {
     background-color: #d7373b;
     color: #e37376;
     border-top: 3px #9b2d30 solid;
   }
 
-  .attachment button {
+  .attachment a {
     background-color: #00ca74;
   }
 
-  .attachment button:hover {
+  .attachment a:hover {
     background-color: #00bc6c;
   }
 
-  .attachment button:active {
+  .attachment a:active {
     background-color: #00aa62;
     color: #4dc491;
     border-top: 3px #009958 solid;
   }
 
-  .presentation button {
+  .presentation a {
     background-color: #efc84a;
   }
 
-  .presentation button:hover {
+  .presentation a:hover {
     background-color: #eab534;
   }
 
-  .presentation button:active {
+  .presentation a:active {
     background-color: #e5a722;
     color: #edc265;
     border-top: 3px #ce961f solid;
   }
 
-  .btn-label {
-    width: 160px;
-    min-height: 50px;
-    border-radius: 2px;
-  }
-
   /** "Мы - гордая студия из Краснодара" index.html **/
 
   .who-we-are {
+    display: block;
+  }
+
+  .who-we-are__top-container,
+  .who-we-are__bottom-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .who-we-are__bottom-container {
+    align-items: flex-start;
   }
 
   .about-us {
+    width: 660px;
   }
 
-  .about-us b {
+  .about-us p b {
     font-family: "Roboto Medium";
     font-size: 45px;
     line-height: 45px;
     color: #000000;
+  }
+
+  .about-us p {
+    color: #283136;
   } 
 
   .our-logo {
+    width: 360px;
   }
 
   .we-can {
+    width: 660px;
   }
 
   .we-can h4,
@@ -321,18 +439,32 @@
     color: #000000;
   }
 
+  .we-can ul {
+    list-style-type: none;
+  }
+
   .we-can li {
     position: relative;
+    margin-top: 35px;
   }
 
   .we-can li:before {
     position: absolute;
     content: "";
-    top: 18px;
-    left: 0px;
+    bottom: 6px;
+    left: -38px;
     width: 25px;
     height: 2px;
     background-color: #fb565a;
+  }
+
+  .how-we-cool {
+    width: 360px;
+  }
+
+  .how-we-cool h4 {
+    margin-bottom: 50px;
+    text-align: end;
   }
 
   .how-we-cool th {
@@ -351,6 +483,17 @@
   }
 
   /** "Ссылки партнеров" index.html**/
+
+  .our-clients {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 181px;
+    border-top: 1px #eeeeee solid;
+    border-bottom: 1px #eeeeee solid;
+    margin-bottom: 80px;
+  }
 
   .our-clients a {
     opacity: 0.2;
@@ -388,16 +531,18 @@
   /** Карта index.html**/
 
   footer {
+    margin-bottom: 70px;
   }
 
   .footer-contacts {
-    min-height: 416px;
     margin: 0 auto;
-    min-width: 1200px;
+    margin-bottom: 70px;
   }
 
   .map {
     position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
   }
 
   .contacts {
@@ -405,14 +550,15 @@
     top: 88px;
     left: 160px;
     width: 250px;
+    height: 200px;
+    padding: 55px 50px;
     background-color: #ffffff;
     z-index: 2;
-    height: 240px;
   } 
   
   .contacts h2,
   .contacts p {
-    margin-left: 20px;
+    margin: 0;
   }
 
   .contacts h2 {
@@ -423,10 +569,20 @@
     color: #000000;
   }
 
+  .contacts h3 {
+    margin-top: 0;
+    margin-bottom: 35px;
+  }
+
+  .contacts p {
+    margin-bottom: 25px;
+  }
+
   .contacts a {
     display: inline-block;
-    width: 219px;
-    height: 50px;
+    height: auto;
+    width: 100%;
+    padding: 17px 0;
     line-height: 18px;
     background-color: #fb565a;
     color: #ffffff;
@@ -446,8 +602,8 @@
 
   .market {
     position: absolute;
-    top: 112px;
-    right: 150px;
+    top: 89px;
+    right: 27%;
     width: 231px;
     height: 190px;
   }
@@ -455,22 +611,36 @@
   /** Контакты **/
 
   .footer-social {
-    position: relative;
-    min-height: 120px;
-    margin: 0 auto;
-    margin-top: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 70px;
+  }
+
+  .footer-links {
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
   } 
 
   .footer-links a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 62px;
-    height: 62px; 
+    height: 62px;
+    margin-right: 12px;
     background: red;
     -moz-border-radius: 31px;
     -webkit-border-radius: 31px;
     border-radius: 31px;
     background-color: #e1e1e1;
-    position: absolute;
-    top: 20px;
+  }
+
+  .footer-links a:last-of-type {
+    margin-right: 0;
   }
 
   .footer-links a:hover {
@@ -481,45 +651,9 @@
     background-color: #d6494d;
   }
 
-  .social-btn-vk {
-    left: 0px;
-  }
-
-  .social-btn-fb {
-    left: 90px;
-  }
-
-  .social-btn-inst {
-    left: 180px;
-  }
-
-  .vk {
-    position: absolute;
-    left: 18px;
-    top: 23px;  
-  }
-
-  .fb {
-    position: absolute;
-    left: 25px;
-    top: 20px;  
-  }
-
-  .inst {
-    position: absolute;
-    left: 21px;
-    top: 21px;  
-  }
-
-  .social-btn:last-child {
-    margin-right: 0;
-  }
-
   .friendship-and-profit {
-    float: left; 
-    width: 550px;
-    margin-left: 320px;
-    padding: auto 0px;
+    width: auto;
+    text-align: start;
   }
 
   .friendship-and-profit b {
@@ -532,34 +666,44 @@
   /** Шапка немного отличается **/
   
   .welcome-message {
+    display: block;
     font-family: "Roboto Medium";
     font-size: 55px;
     line-height: 55px;
     color: #000000;
     text-align: center;
     vertical-align: middle;
+    padding: 0;
+    margin: 0;
+    margin-top: 80px;
+    padding-bottom: 115px;
   }
 
   /** Основное содержание магазина inner.html **/
 
   .main-container {
-    width: 880px;
-    min-height: 1300px;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   .choice-form {
-    float: left;
-    width: 240px;
-    min-height: 1050px;
-    margin-left: 0px;
+    width: 260px;
+  }
+
+  .choice-form fieldset {
+    margin: 0;
+    padding: 0;
   }
 
 /** Стили ролика выборки цены inner.html **/
 
   .range-filter {
-    margin-top: 65px;
     width: 230px;
+  }
+
+  .range-filter h3 {
+    margin-bottom: 55px;
   }
 
   .range-controls {
@@ -573,7 +717,8 @@
     background: #f1f1f1;
   }
 
-  .range-controls h3 {
+  .range-controls h3,
+  .range-filter h3 {
     font-family: "Roboto Bold";
     font-size: 18px;
     line-height: 30px;
@@ -660,7 +805,9 @@
 
   /** Стили для выбора типа сетки inner.html **/
 
-  .web-kind, .differences, .btn-show {
+  .choice-form .web-kind,
+  .choice-form .differences,
+  .choice-form .form-button {
     margin-top: 40px;
     margin-left: 0px;
   }
@@ -751,7 +898,7 @@
     border: 0px green solid;
   }
   
-  .btn-show {
+  .form-button {
     display: block;
     width: 260px;
     height: 50px;
@@ -760,13 +907,15 @@
     background: #eeeeee;
     color: #000000;
     text-transform: uppercase;
+    border: 0 green solid;
+    border-radius: 2px;
   }
 
-  .btn-show:hover {
+  .form-button:hover {
     background-color: #dfdfdf;
   }
 
-  .btn-show:active {
+  .form-button:active {
     background-color: #d5d5d5;
     border-top: 3px #bfbfbf solid;
     color: #959595;
@@ -775,36 +924,51 @@
   /** Стили галереи макетов inner.html **/
 
   .galery {
-    width: 600px;
-    min-height: 1100px;
+    display: flex;
+    flex-direction: column;
+    width: 760px;
     margin-left: 280px;
     padding: 0px;
   }
 
    /** Стили для панели сортировки **/
 
+  .sorting {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-bottom: 50px;
+  }
+
   .sorting ul, .sorting li {
     margin: 0;
     padding: 0;
   }
 
-  .sorting {
-    position: relative;
-  }
-
   .sorting h3 {
+    margin-left: 0;
     font-family: "Roboto Bold";
     font-size: 18px;
     line-height: 18px;
     color: #000000;
+    text-transform: uppercase;
+  }
+
+  .sorting ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    list-style-type: none;
   }
 
   .sorting li {
-    margin-left: 40px;
+    margin-right: 40px;
     font-size: 12px;
     line-height: 18px;
     padding: 0;
-    border-bottom: 1px #00ca74 dotted;
   }
 
   .sorting li a {
@@ -824,58 +988,43 @@
   }
 
   .btn-go {
-    width: 0;
-    height: 0;
-    margin: 0;
+    display: block;
+    width: 11px;
+    height: 10px;
+    margin: 0 0 0 10px;
     padding: 0;
-    position: absolute;
-    top: 4px;
-    right: 0px;
-  }
-
-  .go-bottom {
-  	border-left: 5px solid transparent;
-  	border-right: 5px solid transparent;
-  	border-top: 10px solid #a6a6a6;
-    right: 17px;
-    opacity: 0.2;
-  }
-
-  .go-bottom:hover {
-  	border-top: 10px solid #a6a6a6;
-    opacity: 1;
-  }
-
-  .go-bottom:active {
-  	border-top: 10px solid #000000;
-    opacity: 1;
-  }
-
-  .go-top {
-  	border-left: 5px solid transparent;
-  	border-right: 5px solid transparent;
-  	border-bottom: 10px solid #a6a6a6;
-    right: 0px;
-    opacity: 0.2;
-  }
-
-  .go-top:hover {
-	  border-bottom: 10px solid #a6a6a6;
-    opacity: 1;
-  }
-
-  .go-top:active {
-	  border-bottom: 10px solid #000000;
-    opacity: 1;
+    opacity: 0.5;
   }
 
    /** Стили галереи inner.html **/
+
+  .macket-description {
+    width: 760px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+  }
+
+  .macket-description img {
+    margin: 0;
+    padding: 0;
+  }
+
+  .macket-description a img {
+    display: block;
+    margin: 0;
+    margin-top: -5px;
+    padding: 0;
+  }
 
   .box {
     display: inline-block;
     position: relative;
     width: 360px;
-    height: 618px;
+    height: 615px;
     background-color: #ffffff;
     margin-bottom: 60px;
     padding-left: 0;
@@ -895,9 +1044,9 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    bottom: 20px;
-    width: 360px;
-    height: 230px;
+    width: 210px;
+    padding: 35px 75px 45px 75px;
+    height: 150px;
     background-color: #eeeeee;
     display: none;
   }
@@ -946,14 +1095,19 @@
    /** Панель навигации по страницам галереи inner.html **/
 
   .page-number {
-    width: 500px;
-    min-height: 40px;
-    margin: 80px auto;
-    margin-left: 290px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    margin-bottom: 60px;
+    padding: 0;
   }
    
   .page-number li {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 50px;
     height: 50px;
     background-color: #eeeeee;
@@ -1003,18 +1157,45 @@
   /** Скрытая форма **/
 
   .modal-content {
-    width: 470px;
-    height: 300px;
+    width: 800px;
+    height: 490px;
     background-color: #ffffff;
     padding: 50px 80px;
     margin: 0 auto;
-    position: relative;
     box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
     display: none;
     position: fixed;
-    bottom: 275px;
-    left: 630px;
+    bottom: 200px;
+    left: 240px;
     z-index: 50;
+  }
+
+  .modal-content p b {
+    font-family: "Roboto Medium";
+    font-size: 45px;
+    line-height: 45px;
+    color: #000000;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 50px;
+  }
+
+  .login-form {
+    display: flex;
+    justify-content: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .name,
+  .mail {
+    display: inline-block;
+    vertical-align: top;
+    width: 360px;
+  }
+
+  .letter-txt {
+    width: 100%;
   }
 
   .modal-content-close {
@@ -1026,29 +1207,22 @@
     cursor: pointer;
   }
 
-  .modal-content p b {
-    font-family: "Roboto Medium";
-    font-size: 45px;
-    line-height: 45px;
-    color: #000000;
-    padding: 0;
-    margin: 0;
-  }
-
   .modal-content h3 {
+    display: block;
     font-family: "Roboto Bold";
     line-height: 18px;
     color: #000000;
   }
 
   .login-form input[type=text] {
+    display: block;
     width: 360px;
     height: 50px;
     line-height: 18px;
   }
 
   .login-form textarea {
-    width: 760px;
+    width: 100%;
     height: 118px;
   }
 
@@ -1060,10 +1234,9 @@
 
   .exit {
     margin-top: 48px;
-    width: 460px;
-    height: 38px;
+    padding: 17px 80px;
     background-color: #fb565a;
-    border-radius: 3px;
+    border-radius: 2px;
     color: white;
     font-size: 12px;
     line-height: 18px;
@@ -1121,36 +1294,6 @@
 
   .modal-error {
     animation: shake 0.6s;
-  }
-
-  .sprite {
-    background-image: url("../img/spritesheet.png");
-    background-repeat: no-repeat;
-    display: block;
-  }
-
-  .sprite--icon-basket {
-    width: 15px;
-    height: 15px;
-    background-position: -10px -10px;
-  }
-
-  .sprite--icon-basket-active {
-    width: 15px;
-    height: 15px;
-    background-position: -10px -45px;
-  }
-
-  .sprite--icon-basket-hover {
-    width: 15px;
-    height: 15px;
-    background-position: -10px -80px;
-  }
-
-  .sprite--icon-basket-visited {
-    width: 15px;
-    height: 15px;
-    background-position: -10px -115px;
   }
 
   /* ВЕРСТКА СКРЫТОЙ ФОРМЫ */
