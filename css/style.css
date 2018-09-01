@@ -13,49 +13,20 @@
     min-height: 1200px;
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
-    color: #283136;
+    box-sizing: border-box;
+    font-style: normal;
     font-size: 16px;
     line-height: 24px;
-    font-family: Roboto, "Arial", sans-serif;
+    font-family: "Roboto", "Arial", sans-serif;
     font-weight: 400;
-    box-sizing: border-box;
+    background-color: #ffffff;
+    color: #283136;
     letter-spacing: 100%;
-  }
-
-  img {
-    width: 100%;
+    background-color: #ffffff;
   }
 
   a {
     text-decoration: none;
-  }
-
-  @font-face {
-    font-family: 'Roboto';
-    src: url('../fonts/web/roboto.woff2') format('woff2');
-    src: url('../fonts/web/roboto.woff') format('woff'),
-    url('../fonts/roboto/Roboto-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: 'Roboto';
-    src: url('../fonts/web/robotomedium.woff2') format('woff2');
-    src: url('../fonts/web/robotomedium.woff') format('woff'),
-    url('../fonts/roboto/Roboto-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: 'Roboto';
-    src: url('../fonts/web/robotobold.woff2');
-    src: url('../fonts/web/robotobold.woff') format('woff'),
-    url('../fonts/roboto/Roboto-Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
   }
 
   .container {
@@ -65,12 +36,14 @@
   }
 
   .visually-hidden {
-    visibility: hidden;
-    width: 0;
-    height: 1px;
     position: absolute;
-    left: 0;
-    top: 0;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
   }
 
   /** Стили для страницы index.html **/
@@ -78,17 +51,17 @@
 
   header {
     display: block;
-    background-color: #eeeeee;
     margin: 0 auto;
     margin-bottom: 82px;
+    background-color: #eeeeee;
   }
 
   .main-navigation {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: transparent;
     padding: 43px 0 0 0;
+    background-color: transparent;
   }
 
   .index-logo {
@@ -110,7 +83,7 @@
   .main-navigation ul {
     margin: 0;
     padding: 20px 0 0 0;
-    list-style: none;
+    list-style-type: none;
     font-size: 0;
   }
 
@@ -119,12 +92,12 @@
     display: block;
     margin: 0;
     padding: 6px 0 3px 0;
-    color: #000000;
     font-family: "Roboto";
     font-weight: 500;
     font-size: 16px;
     line-height: 30px;
     text-transform: uppercase;
+    color: #000000;
   }
 
   .site-navigation a:hover,
@@ -152,7 +125,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 55px 0  0px 0;
+    padding: 55px 0  0 0;
   }
 
   .site-navigation li {
@@ -180,10 +153,10 @@
   .login-link:before {
     content: "";
     position: absolute;
-    width: 15px;
-    height: 15px;
     top: 12px;
     right: 100px;
+    width: 15px;
+    height: 15px;
     background-image: url("../img/cart-icon.svg");
   }
 
@@ -231,7 +204,7 @@
   .slider-list {
     margin: 0;
     padding: 0;
-    list-style: none;
+    list-style-type: none;
   }
 
   .slider-item {
@@ -286,22 +259,24 @@
   }
 
   .slider-item h3 {
-    font-family: "Roboto";
     max-width: 600px;
     margin: 0;
     margin-bottom: 27px;
+    font-family: "Roboto";
     font-size: 55px;
     line-height: 55px;
     font-weight: 500;
   }
 
   .slider-item p {
-    font-family: "Roboto";
-    font-weight: 400;
-    line-height: 24px;
     max-width: 430px;
     margin: 0;
     margin-bottom: 38px;
+    font-family: "Roboto";
+    color: #283136;
+    font-weight: 400;
+    line-height: 24px;
+    max-width: 430px;
   }
 
   .button {
@@ -327,8 +302,8 @@
   }
 
   .button:active {
-    background-color: #d7373b;
     color: rgba(255, 255, 255, 0.3);
+    background-color: #d7373b;
     box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
   }
 
@@ -338,8 +313,8 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    border-bottom: 1px #eeeeee solid;
     padding-bottom: 80px;
+    border-bottom: 2px #eeeeee solid;
   }
 
   .catalog img {
@@ -350,33 +325,34 @@
   }
 
   .catalog h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
     font-family: "Roboto";
     font-weight: 700;
     font-size: 24px;
     line-height: 30px;
     text-transform: uppercase;
-    margin-top: 0;
-    margin-bottom: 20px;
   }
 
   .catalog p {
-    font-family: "Roboto";
-    line-height: 22px;
-    color: #283136;
     width: 260px;
     margin-top: 0;
     margin-bottom: 32px;
+    font-family: "Roboto";
+    line-height: 22px;
+    color: #283136;
   }
 
   .catalog a {
     display: inline-block;
-    color: #ffffff;
+    vertical-align: top;
+    height: auto;
+    padding: 16px 40px;
     font-family: "Roboto";
     font-weight: 500;
     font-size: 16px;
     line-height: 18px;
-    height: auto;
-    padding: 16px 40px;
+    color: #ffffff;
     text-transform: uppercase;
     border-radius: 2px;
     cursor: pointer;
@@ -391,8 +367,8 @@
   }
 
   .website a:active {
-    background-color: #d7373b;
     color: #e37376;
+    background-color: #d7373b;
     border-top: 3px #9b2d30 solid;
     box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
   }
@@ -406,8 +382,8 @@
   }
 
   .attachment a:active {
-    background-color: #00aa62;
     color: #4dc491;
+    background-color: #00aa62;
     border-top: 3px #009958 solid;
     box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
   }
@@ -421,8 +397,8 @@
   }
 
   .presentation a:active {
-    background-color: #e5a722;
     color: #edc265;
+    background-color: #e5a722;
     border-top: 3px #ce961f solid;
     box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
   }
@@ -462,16 +438,18 @@
 
   .about-us b {
     display: block;
+    margin-bottom: 35px;
     font-family: "Roboto";
     font-weight: 500;
     font-size: 45px;
     line-height: 45px;
     color: #000000;
-    margin-bottom: 35px;
   }
 
   .our-logo {
+    display: block;
     width: 360px;
+    height: 208px;
     margin-bottom: 10px;
   }
 
@@ -488,11 +466,9 @@
   }
 
   .we-can ul {
-    list-style-type: none;
+    margin: 0 30px 0 35px;
     padding: 0;
-    margin: 0;
-    margin-left: 35px;
-    margin-top: 30px;
+    list-style-type: none;
   }
 
   .we-can li {
@@ -501,11 +477,12 @@
     font-family: "Roboto";
     font-size: 16px;
     line-height: 24px;
+    color: #283136;
   }
 
   .we-can li:before {
-    position: absolute;
     content: "";
+    position: absolute;
     bottom: 12px;
     left: -35px;
     width: 25px;
@@ -523,12 +500,12 @@
   }
 
   .how-we-cool th {
+    width: 120px;
     font-family: "Roboto";
     font-weight: 700;
     font-size: 45px;
     line-height: 45px;
     color: #000000;
-    width: 120px;
     text-align: start;
   }
 
@@ -538,17 +515,19 @@
   }
 
   .how-we-cool td {
+    width: 120px;
+    padding-top: 15px;
     font-family: "Roboto";
     font-weight: 400;
     font-size: 16px;
     line-height: 18px;
-    padding-top: 15px;
-    width: 120px;
+    color: #283136;
   }
 
-  .our-logo img {
+  .our-logo {
     width: 360px;
     height: 208px;
+    background-image: url(../img/nerds-illustration.jpg);
   }
 
   /** "Ссылки партнеров" index.html**/
@@ -558,11 +537,10 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 184px;
-    border-top: 1px #eeeeee solid;
-    border-bottom: 1px #eeeeee solid;
-    margin: 0 40px 0 30px;
-    margin-bottom: 75px;
+    height: 182px;
+    margin: 0 40px 75px 30px;
+    border-top: 2px #eeeeee solid;
+    border-bottom: 2px #eeeeee solid;
   }
 
   .our-clients a {
@@ -603,7 +581,6 @@
   }
 
   /** Footer **/
-  /** Карта index.html**/
 
   footer {
     margin-bottom: 70px;
@@ -624,11 +601,11 @@
     position: absolute;
     top: 55px;
     left: 140px;
+    z-index: 2;
     width: 220px;
     height: 200px;
     padding: 55px 50px;
     background-color: #ffffff;
-    z-index: 2;
   } 
   
   .contacts h2,
@@ -638,37 +615,38 @@
 
   .contacts h3 {
     margin-top: -5px;
+    margin-bottom: 22px;
     font-family: "Roboto";
     font-size: 18px;
-    font-weight: 700;
     line-height: 30px;
+    font-weight: 700;
     text-transform: uppercase;
     color: #000000;
-    margin-bottom: 22px;
   }
 
   .contacts p {
+    margin-bottom: 18px;
     font-family: "Roboto";
-    font-weight: 400;
-    color: #666666;
     font-size: 16px;
     line-height: 18px;
-    margin-bottom: 18px;
+    font-weight: 400;
+    color: #666666;
   }
 
   .contacts a {
     display: inline-block;
-    height: auto;
+    vertical-align: top;
     width: 100%;
+    height: auto;
     padding: 16px 0;
     margin-top: 20px;
     font-family: "Roboto";
-    text-transform: uppercase;
     font-size: 16px;
     line-height: 18px;
-    background-color: #fb565a;
+    text-transform: uppercase;
     color: #ffffff;
     text-align: center;
+    background-color: #fb565a;
     border-radius: 2px;
   }
 
@@ -677,22 +655,22 @@
   }
 
   .contacts a:active {
-    background-color: #d7373b;
-    color: #e37376;
-    border-top: 3px #c13135 solid;
     padding-top: 13px;
+    color: #e37376;
+    background-color: #d7373b;
+    border-top: 3px #c13135 solid;
     box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
     box-sizing: border-box;
   }
 
   .market {
     position: absolute;
-    display: block;
     top: 89px;
     right: 50%;
-    margin-right: -331px;
+    display: block;
     width: 231px;
     height: 190px;
+    margin-right: -331px;
   }
 
   /** Контакты **/
@@ -705,11 +683,11 @@
   }
 
   .footer-links {
-    width: 400px;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    width: 400px;
   } 
 
   .social-link {
@@ -719,7 +697,6 @@
     width: 78px;
     height: 78px;
     margin-right: 12px;
-    background: red;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
     border-radius: 50%;
@@ -744,36 +721,36 @@
   }
 
   .friendship-and-profit {
+    width: auto;
     font-family: "Roboto";
-    font-weight: 400;
     font-size: 16px;
     line-height: 18px;
-    width: auto;
+    font-weight: 400;
+    color: #444444;
     text-align: start;
   }
 
   .friendship-and-profit b {
     font-family: "Roboto";
-    font-weight: 700;
-    color: #000000;
     font-size: 36px;
     line-height: 36px;
+    font-weight: 700;
+    color: #000000;
   }
   /** Стили страницы inner.html **/
   /** Шапка немного отличается **/
   
   .welcome-message {
     display: block;
+    margin: 0;
+    padding: 25px 0 50px 0;
     font-family: "Roboto";
-    font-weight: 500;
     font-size: 55px;
     line-height: 55px;
+    font-weight: 500;
     color: #000000;
     text-align: center;
     vertical-align: middle;
-    padding: 0;
-    margin: 0;
-    padding: 25px 0 50px 0;
   }
 
   /** Основное содержание магазина inner.html **/
@@ -782,8 +759,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: -45px;
     width: 1160px;
+    margin-top: -45px;
   }
 
   .choice-form {
@@ -795,111 +772,108 @@
     padding: 0;
   }
 
-/** Стили ролика выборки цены inner.html **/
+  /** Стили ролика выборки цены inner.html **/
 
-.filter-item {
-  margin: 0;
-  margin-top: 22px;
-  padding: 0;
-  border: none;
-  width: 260px;
-}
+  .filter-item {
+    width: 260px;
+    margin: 0;
+    margin-top: 22px;
+    padding: 0;
+    border: none;
+  }
 
-.range-filter {
-  width: 260px;
-  margin-top: 50px;
-}
+  .range-filter {
+    width: 260px;
+    margin-top: 50px;
+  }
 
-.filter-item legend {
-  font-size: 18px;
-  line-height: 24px;
-  text-transform: uppercase;
-  font-weight: 700;
-}
+  .filter-item legend {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
 
-.range-controls {
-  position: relative;
-  height: 41px;
-  margin-bottom: 15px;
-  padding-top: 39px;
-  padding-right: 20px;
-  padding-left: 20px;
-  background-color: #f1f1f1;
-  border-radius: 5px;
-}
+  .range-controls {
+    position: relative;
+    height: 41px;
+    margin-bottom: 15px;
+    padding-top: 39px;
+    padding-right: 20px;
+    padding-left: 20px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+  }
 
-.range-controls .scale {
-  height: 2px;
-  background: #d7dcde;
-}
+  .range-controls .scale {
+    height: 2px;
+    background: #d7dcde;
+  }
 
-.range-controls .bar {
-  width: 70%;
-  height: 2px;
-  background: #00ca74;
-}
+  .range-controls .bar {
+    width: 70%;
+    height: 2px;
+    background: #00ca74;
+  }
 
-.range-controls .toggle {
-  position: absolute;
-  top: 31px;
-  left: 0;
-  width: 4px;
-  height: 4px;
-  padding: 0;
-  border: 8px solid #ffffff;
-  background-color: #ababab;
-  box-shadow: 0 2px 1px 0 #cfcfcf;
-  border-radius: 50%;
-  cursor: pointer;
-}
+  .range-controls .toggle {
+    position: absolute;
+    top: 31px;
+    left: 0;
+    width: 4px;
+    height: 4px;
+    padding: 0;
+    border: 8px solid #ffffff;
+    background-color: #ababab;
+    box-shadow: 0 2px 1px 0 #cfcfcf;
+    border-radius: 50%;
+    cursor: pointer;
+  }
 
-.range-controls .toggle-min {
-  left: 18px;
-}
+  .range-controls .toggle-min {
+    left: 18px;
+  }
 
-.range-controls .toggle-max {
-  left: 160px;
-}
+  .range-controls .toggle-max {
+    left: 160px;
+  }
 
-.price-controls {
-  font-size: 0;
-}
+  .price-controls {
+    font-size: 0;
+  }
 
-.price-controls label {
-  display: inline-block;
-  width: 50%;
-  font-size: 16px;
-  text-transform: uppercase;
-}
+  .price-controls label {
+    display: inline-block;
+    width: 50%;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
 
-.price-controls input {
-  width: 60px;
-  padding: 8px 10px;
-  margin-left: 10px;
-  font-family: Roboto, Arial, sans-serif;
-  font-size: 16px;
-  text-align: center;
-  color: #283136;
-  border: none;
-  border-radius: 5px;
-  background: #f1f1f1;
-}
+  .price-controls input {
+    width: 60px;
+    margin-left: 10px;
+    padding: 8px 10px;
+    font-size: 16px;
+    text-align: center;
+    color: #283136;
+    background: #f1f1f1;
+    border: none;
+    border-radius: 5px;
+  }
 
-.max-price {
-  text-align: right;
-}
-
-  /** Стили окон диапазона выборки цены inner.html **/
+  .max-price {
+    text-align: right;
+  }
 
   /** Стили для выбора типа сетки inner.html **/
 
   .web-kind,
   .differences,
   .form-button {
-    padding: 0;
     margin: 0;
-    border: none;
     margin-top: 40px;
+    padding: 0;
+    border: none;
   }
 
   .differences {
@@ -912,23 +886,23 @@
 
   .web-kind h3,
   .differences h3 {
-    font-family: "Roboto";
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 30px;
-    color: #000000;
-    text-transform: uppercase;
     margin-left: 0;
     margin-bottom: 17px;
+    font-family: "Roboto";
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #000000;
+    text-transform: uppercase;
   }
 
   .web-kind input[type="radio"],
   input[type="checkbox"] {
-    opacity: 0;
+    display: none;
     width: 0;
     margin: 0;
     padding: 0;
-    display: none;
+    opacity: 0;
   }
 
   label[for="button-1"], 
@@ -941,12 +915,12 @@
   label[for="kind-of-items-5"] {
     position: relative;
     display: block;
-    line-height: 20px;
-    font-size: 16px;
     margin-bottom: 0px;
     padding: 0 0 20px 37px;
-    cursor: pointer;
+    font-size: 16px;
+    line-height: 20px;
     color: #283136;
+    cursor: pointer;
   }
 
   .web-kind p,
@@ -1089,18 +1063,17 @@
   }
 
   fieldset {
-    border: 0px green solid;
+    border: 0 green solid;
   }
   
   .form-button {
     display: block;
     width: 260px;
     height: 50px;
-    font-family: "Roboto";
     font-weight: 500;
     line-height: 18px;
-    background: #eeeeee;
     color: #000000;
+    background: #eeeeee;
     text-transform: uppercase;
     border: 0 green solid;
     border-radius: 2px;
@@ -1111,9 +1084,9 @@
   }
 
   .form-button:active {
+    color: #959595;
     background-color: #d5d5d5;
     border-top: 3px #bfbfbf solid;
-    color: #959595;
     box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
   }
 
@@ -1129,11 +1102,11 @@
    /** Стили для панели сортировки **/
 
   .sorting {
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    position: relative;
     margin-bottom: 41px;
     margin-top: 3px;
   }
@@ -1145,11 +1118,12 @@
   }
 
   .sorting h3 {
+    flex-grow: 0;
     margin-left: 0;
     font-family: "Roboto";
-    font-weight: 700;
     font-size: 18px;
     line-height: 18px;
+    font-weight: 700;
     color: #000000;
     text-transform: uppercase;
   }
@@ -1162,23 +1136,25 @@
     list-style-type: none;
   }
 
-  .sorting li {
+  .sorting-kind {
+    flex-grow: 20;
+  }
+
+  .sorting-kind li {
     margin-right: 24px;
-    font-size: 12px;
-    line-height: 18px;
     padding: 0;
     padding-top: 2px;
   }
 
   .sorting-link {
-    text-transform: uppercase;
-    color: #000000;
-    opacity: 0.3;
     font-size: 14px;
     line-height: 18px;
+    color: #000000;
+    text-transform: uppercase;
+    opacity: 0.3;
   }
 
-  .sorting li:last-of-type {
+  .sorting-kind li:last-of-type {
     margin-right: 24px;
   }
 
@@ -1210,24 +1186,23 @@
    /** Стили галереи inner.html **/
 
   .macket-description {
-    width: 760px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 0;
+    width: 760px;
     margin: 0;
     margin-bottom: 29px;
+    padding: 0;
     list-style-type: none;
   }
 
   .macket-description svg {
-    width: 358px;
-    display: block;
-    margin: 0;
-    margin-top: -0px;
-    padding: 0;
     z-index: 1;
+    display: block;
+    width: 360px;
+    margin: 0;
+    padding: 0;
     border: none;
   }
 
@@ -1242,9 +1217,10 @@
 
   .link,
   .link img {
-    border: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
+    border: none;
+    cursor: default;
   }
 
   .link img {
@@ -1253,15 +1229,15 @@
 
   .box {
     position: relative;
+    z-index: 2;
     width: 360px;
     height: 616px;
-    background-color: #ffffff;
     margin-bottom: 32px;
-    padding-left: 0;
     margin-left: 0;
+    padding-left: 0;
+    background-color: #ffffff;
     border: 1px #e5e5e5 solid;
     box-sizing: border-box;
-    z-index: 2;
   }
 
   .box:hover {
@@ -1276,47 +1252,49 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 208px;
-    padding: 10px 75px 50px 75px;
-    height: 170px;
-    background-color: #eeeeee;
     display: none;
+    width: 210px;
+    height: 170px;
+    padding: 10px 75px 50px 75px;
+    background-color: #eeeeee;
   }
 
   .sticker h3 {
-    font-family: "Roboto";
-    font-weight: 700;
+    margin-bottom: 13px;
     font-size: 18px;
     line-height: 30px;
+    font-weight: 700;
     color: #000000;
     text-align: center;
     text-transform: uppercase;
-    margin-bottom: 13px;
+  }
+
+  .product-link {
+    color: #000000;
   }
 
   .sticker p {
-    text-align: center;
-    vertical-align: middle;
-    font-family: "Roboto";
-    font-weight: 400;
-    color: #666666;
-    font-size: 16px;
-    line-height: 18px;
     margin: 0 auto;
     margin-bottom: 25px;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 400;
+    color: #666666;
+    text-align: center;
+    vertical-align: middle;
   }
 
   .sticker button {
     position: absolute;
-    left: 79px;
-    width: 200px;
     bottom: 42px;
+    left: 79px;
     display: block;
+    width: 200px;
     height: 50px;
-    background-color: #fb565a;
     color: #ffffff;
     text-align: center;
     vertical-align: middle;
+    background-color: #fb565a;
     border-radius: 2px;
   }
 
@@ -1337,17 +1315,17 @@
   }
 
   .description-sedona .sticker {
-    width: 199px;
+    width: 200px;
     padding: 10px 80px 50px 80px;
   }
 
   .description-pink .sticker {
-    width: 239px;
+    width: 240px;
     padding: 10px 60px 50px 60px;
   }
 
   .description-borodinski .sticker {
-    width: 179px;
+    width: 180px;
     padding: 10px 90px 50px 90px;
   }
 
@@ -1368,20 +1346,19 @@
     justify-content: center;
     align-items: center;
     width: 50px;
-    padding: 16px 0;
-    background-color: #eeeeee;
-    color: #000000;
     margin-right: 10px;
+    padding: 16px 0;
+    color: #000000;
+    background-color: #eeeeee;
     border-radius: 2px; 
   }
 
   .page-numbers a {
-    font-family: "Roboto";
     font-size: 16px;
-    font-weight: 500;
-    text-transform: uppercase;
     line-height: 18px;
+    font-weight: 500;
     color: #000000;
+    text-transform: uppercase;
     text-align: center;
     vertical-align: middle;
   }
@@ -1391,10 +1368,10 @@
   }
 
   .page-numbers .page-active {
-    background-color: #ffffff;
-    color: #000000;
-    border: 3px #dbdbdb solid;
     padding: 13px 0;
+    color: #000000;
+    background-color: #ffffff;
+    border: 3px #dbdbdb solid;
     box-sizing: border-box;
   }
 
@@ -1421,28 +1398,28 @@
   /** Скрытая форма **/
 
   .modal-content {
-    width: 800px;
-    height: 490px;
-    background-color: #ffffff;
-    padding: 50px 80px;
-    margin: 0 auto;
-    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
-    display: none;
     position: fixed;
-    bottom: 200px;
-    left: 240px;
+    bottom: 185px;
+    left: calc(50% - 480px);
     z-index: 50;
+    display: none;
+    width: 760px;
+    height: 490px;
+    margin: 0 auto;
+    padding: 50px 100px;
+    background-color: #ffffff;
+    box-shadow: 0px 20px 40px rgba(0, 1, 1, 0.75);
   }
 
   .modal-content b {
-    font-family: "Roboto";
-    font-weight: 500;
+    display: block;
+    margin: 0;
+    margin-bottom: 40px;
+    padding: 0;
     font-size: 45px;
     line-height: 45px;
+    font-weight: 500;
     color: #000000;
-    padding: 0;
-    margin: 0;
-    margin-bottom: 50px;
   }
 
   .login-form {
@@ -1465,22 +1442,43 @@
 
   .modal-content-close {
     position: absolute;
+    top: 78px;
     right: 90px;
-    top: 80px;
+    width: 21px;
+    height: 21px;
     font-size: 0;
+    background: url(../img/close-cross.svg) no-repeat;
+    opacity: 0.3;
     border: 0;
     cursor: pointer;
   }
 
-  .modal-content h3 {
+  .modal-content-close:hover {
+    opacity: 1;
+  }
+
+  .modal-content-close:active {
+    opacity: 0.1;
+  }
+
+  .form-text {
     display: block;
-    font-family: "Roboto";
+    margin: 0;
+    margin-bottom: 11px;
+    padding: 0;
     font-weight: 700;
+    font-size: 16px;
     line-height: 18px;
+    font-weight: 700;
     color: #000000;
   }
 
-  .login-form input[type=text] {
+  .letter-txt .form-text {
+    margin-top: 32px;
+  }
+
+  .login-form input[type=text],
+  .login-form input[type=email] {
     display: block;
     width: 360px;
     height: 50px;
@@ -1493,50 +1491,64 @@
   }
 
   .login-form input[type=text],
+  .login-form input[type=email],
   .login-form textarea {
     border: 2px #d7dcde solid;
     border-radius: 2px;
+    box-sizing: border-box;
   }
 
   .exit {
-    margin-top: 48px;
-    padding: 17px 80px;
+    margin-top: 40px;
+    padding: 16px 82px;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+    color: white;
     background-color: #fb565a;
     border-radius: 2px;
-    color: white;
-    font-size: 12px;
-    line-height: 18px;
+    text-transform: uppercase;
   }
 
   .login-form input::placeholder,
   .login-form textarea::placeholder {
-    line-height: 18px;
     padding-left: 15px;
+    line-height: 18px;
     color: #000000;
     opacity: 0.5;
   }
 
-  .login-form input[type=text]:hover, 
+  .login-form textarea::placeholder {
+    padding-top: 9px;
+    padding-left: 13px;
+  }
+
+  .login-form input[type=text]:hover,
+  .login-form input[type=email]:hover, 
   .login-form textarea:hover {
     border-color: #b4b9bb;
   }
 
   .login-form input[type=text]:focus,
+  .login-form input[type=email]:focus,
   .login-form textarea:focus {
     border-color: #000000;
   }
 
   .login-form input[type=text]:focus::placeholder,
+  .login-form input[type=email]:focus::placeholder,
   .login-form textarea:focus::placeholder {
     opacity: 1;
   }
 
   .login-form input[type=text]:invalid,
+  .login-form input[type=email]:invalid,
   .login-form textarea:invalid {
     border-color: #e74246;
   }
 
   .login-form input[type=text]:invalid::placeholder,
+  .login-form input[type=email]:invalid::placeholder,
   .login-form textarea:invalid::placeholder {
     color: #e74246;
     opacity: 1;
@@ -1546,16 +1558,16 @@
     position: fixed;
     top: 0;
     left: 0;
+    z-index: -1;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.05);
-    z-index: -1;
   }
 
   .modal-content-show {
+    z-index: 20;
     display: block;
     animation: bounce 0.6s;
-    z-index: 20;
   }
 
   .modal-error {
