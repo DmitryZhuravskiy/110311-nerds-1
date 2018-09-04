@@ -31,7 +31,7 @@
     </header>
 
     <main class="main-container container">
-      <form method="get" action="https://echo.htmlacademy.ru">
+      <form action="https://echo.htmlacademy.ru" method="post">
         <fieldset class="filter-item">
           <legend>Стоимость:</legend>
           <div class="range-filter">
@@ -110,7 +110,7 @@
             </div>
           </li>
           <li class="description-borodinski box">
-            <a class="link" href="#"><img src="img/borodinski.jpg" width="360" height="576" alt="borodinski-landing-page"></a>
+            <a class="link" href="#"><img src="img/borodinski.jpg" width="360" height="576" alt="barbershop-borodinski-landing-page"></a>
             <div class="sticker">
               <h3><a class="product-link" href="#">Barbershop</a></h3>
               <p>Сайт салона красоты. Для мужчин, да.</p>
@@ -126,7 +126,7 @@
             </div>
           </li>
           <li class="description-aplus box">
-            <a class="link" href="#"><img src="img/aplus.jpg" width="360" height="576" alt="aplus-landing-page"></a>
+            <a class="link" href="#"><img src="img/aplus.jpg" width="360" height="576" alt="a-plus-landing-page"></a>
             <div class="sticker">
               <h3><a class="product-link" href="#">A Plus</a></h3>
               <p>Лендинг курсов повышения квалификации</p>
@@ -143,27 +143,26 @@
           </li>
         </ul>
         <ul class="page-numbers">
-          <li class="page-number page-active"><a href="#">1</a></li>
-          <li class="page-number"><a href="#">2</a></li>
-          <li class="page-number"><a href="#">3</a></li>
-          <li class="page-number"><a href="#">Следующая</a></li>
+          <li class="page-number page-active" aria-label="Первая страница подборки"><a href="#">1</a></li>
+          <li class="page-number" aria-label="Вторая страница подборки"><a href="#">2</a></li>
+          <li class="page-number" aria-label="Третья страница подборки"><a href="#">3</a></li>
+          <li class="page-number" aria-label="Следующая страница подборки"><a href="#">Следующая</a></li>
         </ul>
       </section>
     </main>
 
     <footer>
-      <section class="map footer-contacts">
+      <section class="footer-map">
         <h2 class="visually-hidden">Наш адрес</h2>
-        <img src="img/map.jpg" width="auto" height="416" alt="map">
-        <div class="market">
-          <img src="img/map-marker.png" width="231" height="190" alt="map-marker">
-        </div>
-        <article class="contacts">
+        <iframe class="footer-map-widget" src="https://yandex.ru/map-widget/v1/-/CBuyA-HzxD" aria-label="Карта"></iframe>  
+      </section>
+      <section class="footer-contacts-container">
+        <div class="footer-contacts">
             <h3>NËRDS DESIGN STUDIO</h3>
-            <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+            <p>191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</p>
             <p class="phone">тел. +7 (812) 275-75-75</p>
             <a class="write-us login" href="#login">Напишите нам</a>
-        </article>   
+        </div> 
       </section>
       <section class="footer-social container">
         <h2 class="visually-hidden">Мы в социальный сетях</h2>
@@ -180,7 +179,7 @@
         </article>
         <article class="friendship-and-profit">
           <p><b>Давайте дружить, это выгодно!</b></p>
-          <p>Скидка 10% для друзей из социальных сетей.</p>
+          <p class="discount-to-friends">Скидка 10% для друзей из социальных сетей.</p>
         </article>
       </section>
     </footer>

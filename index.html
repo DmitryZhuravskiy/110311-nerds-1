@@ -11,7 +11,7 @@
     <header class="main-header">
       <h1 class="visually-hidden">Веб студия Нёрдс</h1>
       <nav class="main-navigation container">
-        <a class="index-logo" href="#">
+        <a class="index-logo">
           <img src="img/nerds-logo.svg" width="160" height="65" alt="logo-nerds">
         </a>
         <ul class="site-navigation">
@@ -62,20 +62,20 @@
       <section class="catalog">
         <h2 class="visually-hidden">Каталог</h2>
         <article class="website">
-          <img src="img/website-illustration.jpg" width="300" height="146" alt="website">
-          <h3>ВЕБ-САЙТЫ</h3>
+          <img src="img/website-illustration.jpg" width="300" height="146" alt="Веб-сайты">
+          <h3>Веб-сайты</h3>
           <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
           <a href="#">Заказать</a>
         </article>
         <article class="attachment">
-          <img src="img/attachment-illustration.jpg" width="300" height="146" alt="attachment">
-          <h3>ПРИЛОЖЕНИЯ</h3>
+          <img src="img/attachment-illustration.jpg" width="300" height="146" alt="Приложения">
+          <h3>Приложения</h3>
           <p>Покорите топ-10 приложений в AppStore и Google Play</p>
           <a href="#">Заказать</a>
         </article>
         <article class="presentation">
-          <img src="img/presentation-illustration.jpg" width="300" height="146" alt="presentation">
-          <h3>ПРЕЗЕНТАЦИИ</h3>
+          <img src="img/presentation-illustration.jpg" width="300" height="146" alt="Презентации">
+          <h3>Презентации</h3>
           <p>Вы даже не подозреваете? насколько вы изумительны!</p>
           <a href="#">Заказать</a>
         </article>
@@ -129,18 +129,17 @@
     </main>
 
     <footer>
-	    <section class="map footer-contacts">
+      <section class="footer-map">
         <h2 class="visually-hidden">Наш адрес</h2>
-        <img src="img/map.jpg" width="auto" height="416" alt="map">
-        <div class="market">
-	        <img src="img/map-marker.png" width="231" height="190" alt="map-marker">
-	      </div>
-        <article class="contacts">
+        <iframe class="footer-map-widget" src="https://yandex.ru/map-widget/v1/-/CBuyA-HzxD" aria-label="Карта"></iframe>  
+      </section>
+      <section class="footer-contacts-container">
+        <div class="footer-contacts">
             <h3>NËRDS DESIGN STUDIO</h3>
-            <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+            <p>191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</p>
             <p class="phone">тел. +7 (812) 275-75-75</p>
             <a class="write-us login" href="#login">Напишите нам</a>
-        </article>   
+        </div> 
       </section>
       <section class="footer-social container">
         <h2 class="visually-hidden">Мы в социальный сетях</h2>
@@ -157,7 +156,7 @@
         </article>
         <article class="friendship-and-profit">
           <p><b>Давайте дружить, это выгодно!</b></p>
-          <p>Скидка 10% для друзей из социальных сетей.</p>
+          <p class="discount-to-friends">Скидка 10% для друзей из социальных сетей.</p>
         </article>
       </section>
     </footer>

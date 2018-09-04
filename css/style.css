@@ -216,18 +216,21 @@
     background-image: url("../img/slide1.png");
     background-repeat: no-repeat;
     background-position: 93% 18px;
+    animation: arrival 0.4s;
   }
 
   .slider-item:nth-child(2) {
     background-image: url("../img/slide2.png");
     background-repeat: no-repeat;
     background-position: 100% 0;
+    animation: arrival 0.4s;
   }
 
   .slider-item:nth-child(3) {
     background-image: url("../img/slide3.png");
     background-repeat: no-repeat;
     background-position: 100% 20px;
+    animation: arrival 0.4s;
   }
 
   #product-1:checked ~ .slider-list .slider-item:nth-child(1) {
@@ -579,37 +582,49 @@
 
   footer {
     margin-bottom: 70px;
+    position: relative;
+  }
+
+  .footer-map {
+    height: 416px;
+    background-image: url("../img/map.jpg");
+    background-color: #ffffff;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .footer-map-widget {
+    z-index: 10;
+    border: 1px;
+    width: 100%;
+    min-height: 416px;
+  }
+
+  .footer-contacts-container {
+    position: relative;
+    max-width: 1440px;
+    height: 0;
+    margin: 0 auto;
+    margin-bottom: 60px;
   }
 
   .footer-contacts {
-    margin: 0 auto;
-    margin-bottom: 70px;
-  }
-
-  .map {
-    position: relative;
-    width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
-  }
-
-  .contacts {
     position: absolute;
-    top: 55px;
+    bottom: 53px;
     left: 140px;
-    z-index: 2;
+    z-index: 12;
     width: 220px;
     height: 200px;
     padding: 55px 50px;
     background-color: #ffffff;
   } 
   
-  .contacts h2,
-  .contacts p {
+  .footer-contacts h2,
+  .footer-contacts p {
     margin: 0;
   }
 
-  .contacts h3 {
+  .footer-contacts h3 {
     margin-top: -5px;
     margin-bottom: 22px;
     font-family: "Roboto";
@@ -620,7 +635,7 @@
     color: #000000;
   }
 
-  .contacts p {
+  .footer-contacts p {
     margin-bottom: 18px;
     font-family: "Roboto";
     font-size: 16px;
@@ -629,7 +644,7 @@
     color: #666666;
   }
 
-  .contacts a {
+  .footer-contacts a {
     display: inline-block;
     vertical-align: top;
     width: 100%;
@@ -646,11 +661,11 @@
     border-radius: 2px;
   }
 
-  .contacts a:hover {
+  .footer-contacts a:hover {
     background-color: #e74246;
   }
 
-  .contacts a:active {
+  .footer-contacts a:active {
     padding-top: 13px;
     color: #e37376;
     background-color: #d7373b;
@@ -659,15 +674,19 @@
     box-sizing: border-box;
   }
 
+  /*
   .market {
     position: absolute;
     top: 89px;
-    left: 820px;
+    left: 50%;
+    z-index: 5;
     display: block;
     width: 231px;
     height: 190px;
-    margin-right: -331px;
-  }
+    margin-right: 231px;
+    background-image: url("../img/map-marker.png");
+  } 
+  */
 
   /** Контакты **/
 
@@ -721,7 +740,7 @@
     width: auto;
     font-family: "Roboto";
     font-size: 16px;
-    line-height: 18px;
+    line-height: 22px;
     font-weight: 400;
     color: #444444;
     text-align: start;
@@ -734,6 +753,11 @@
     font-weight: 700;
     color: #000000;
   }
+
+  .discount-to-friends {
+    margin-top: -6px;
+  }
+
   /** Стили страницы inner.html **/
   /** Шапка немного отличается **/
   
@@ -1254,24 +1278,6 @@
     opacity: 1;
   }
 
-  .macket-description svg {
-    z-index: 1;
-    display: block;
-    width: 360px;
-    margin: 0;
-    padding: 0;
-    border: none;
-  }
-
-  .description-sedona:hover path,
-  .description-pink:hover path,
-  .description-borodinski:hover path,
-  .description-mishka:hover path,
-  .description-aplus:hover path,
-  .description-kvast:hover path {
-    fill: #4D4D4D;
-  }
-
   .link,
   .link img {
     margin: 0;
@@ -1614,16 +1620,16 @@
 
   @-webkit-keyframes bounce {
     0% {
-      transform: translateX(2000px);
+      transform: translateY(2000px);
     }
     70% {
-      transform: translateX(-200px);
+      transform: translateY(-200px);
     }
     90% {
-      transform: translateX(50px);
+      transform: translateY(50px);
     }
     100% {
-      transform: translateX(0);
+      transform: translateY(0);
     }
   }
 
@@ -1663,6 +1669,15 @@
     }
     20%, 40%, 60%, 80% {
       transform: translateX(20px);
+    }
+  }
+
+  @keyframes arrival {
+    0% {
+      transform: translateX(2000px);
+    }
+    100% {
+      transform: translateX(0);
     }
   }
   </body>
