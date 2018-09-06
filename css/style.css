@@ -102,7 +102,8 @@ a {
 
 .site-navigation a:active,
 .user-navigation a:active {
-  color: #a6a6a6;
+  color: #000000;
+  opacity: 0.3;
 } 
 
 .site-navigation .active,
@@ -163,7 +164,11 @@ a {
   padding-left: 39px;
 }
 
-.login-link:before {
+.basket-link {
+  position: relative;
+}
+
+.basket-link:before {
   content: "";
   position: absolute;
   top: 12px;
@@ -309,7 +314,7 @@ a {
   text-align: center;
   text-decoration: none;
   background-color: #fb565a;
-  border-radius: 3px;
+  border-radius: 2px;
 }
 
 .button:hover,
@@ -318,8 +323,10 @@ a {
 }
 
 .button:active {
+  padding-top: 13px;
   color: rgba(255, 255, 255, 0.3);
   background-color: #d7373b;
+  border-top: 3px #c13135 solid;
   -webkit-box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
           box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
 }
@@ -367,15 +374,24 @@ a {
 .catalog a {
   display: inline-block;
   vertical-align: top;
+  width: 160px;
   height: auto;
-  padding: 16px 40px;
+  padding: 16px 0;
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
   color: #ffffff;
+  text-align: center;
   text-transform: uppercase;
   border-radius: 2px;
   cursor: pointer;
+}
+
+.catalog a:active {
+  padding-top: 13px;
+  color: rgba(255, 255, 255, 0.3);
+  -webkit-box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
+          box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
 }
 
 .website a {
@@ -387,12 +403,8 @@ a {
 }
 
 .website a:active {
-  padding-top: 13px;
-  color: #e37376;
   background-color: #d7373b;
   border-top: 3px #9b2d30 solid;
-  -webkit-box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
-          box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
 }
 
 .attachment a {
@@ -404,12 +416,8 @@ a {
 }
 
 .attachment a:active {
-  padding-top: 13px;
-  color: #4dc491;
   background-color: #00aa62;
   border-top: 3px #009958 solid;
-  -webkit-box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
-          box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
 }
 
 .presentation a {
@@ -421,12 +429,8 @@ a {
 }
 
 .presentation a:active {
-  padding-top: 13px;
-  color: #edc265;
   background-color: #e5a722;
   border-top: 3px #ce961f solid;
-  -webkit-box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
-          box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
 }
 
 /** "Мы - гордая студия из Краснодара" index.html **/
@@ -642,9 +646,9 @@ a {
   bottom: 53px;
   left: 140px;
   z-index: 12;
-  width: 220px;
-  height: 200px;
-  padding: 55px 50px;
+  width: 219px;
+  height: 210px;
+  padding: 51px 50px 47px 50px;
   background-color: #ffffff;
 } 
   
@@ -692,13 +696,11 @@ a {
 
 .footer-contacts a:active {
   padding-top: 13px;
-  color: #e37376;
+  color: rgba(255, 255, 255, 0.3);
   background-color: #d7373b;
   border-top: 3px #c13135 solid;
   -webkit-box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
           box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
 /** Контакты **/
@@ -767,7 +769,7 @@ a {
 }
 
 .social-link:active path {
-  fill: #e37376;
+  opacity: 0.3;
 }
 
 .friendship-and-profit {
@@ -880,6 +882,7 @@ a {
   position: absolute;
   top: 31px;
   left: 0;
+  vertical-align: top;
   width: 4px;
   height: 4px;
   padding: 0;
@@ -913,6 +916,7 @@ a {
 }
 
 .price-controls input {
+  vertical-align: top;
   width: 60px;
   margin-left: 10px;
   padding: 8px 10px;
@@ -1021,24 +1025,22 @@ a {
 }
 
 .web-type-item:hover,
-.radio-button:checked + .web-type-item:hover,
-.differences-type-item:hover,
-.checkbox-button:checked + .differences-type-item:hover {
+.radio-button:checked + .web-type-item:hover {
   color: #000000;
 }
 
-.web-type-item:hover:before, 
+.web-type-item:hover:before,
 .radio-button:checked + .web-type-item:hover:before,
 .differences-type-item:hover:before,
 .checkbox-button:checked + .differences-type-item:hover:before {
   opacity: 1;
 }
 
-.web-type-item:active, 
+.web-type-item:active,
 .radio-button:checked + .web-type-item:active,
 .differences-type-item:active,
 .checkbox-button:checked + .differences-type-item:active {
-  color: #bec1c2;
+  color: rgba(40, 49, 54, 0.3)
 }
 
 .web-type-item:active:before,
@@ -1067,7 +1069,7 @@ a {
 
 .form-button:active {
   padding-top: 13px;
-  color: #959595;
+  color: rgba(0, 0, 0, 0.3)
   background-color: #d5d5d5;
   border-top: 3px #bfbfbf solid;
   -webkit-box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
@@ -1184,32 +1186,50 @@ a {
 
 .go-bottom,
 .go-top {
+  position: relative;
   display: block;
-  width: 11px;
-  height: 10px;
+  width: 0;
+  height: 0;
   margin: 0 0 -2px 18px;
   padding: 0;
-  border: 0;
+  background: #ffffff;
   opacity: 0.2;
 }
 
 .go-bottom {
-  background: url(../img/icon-down-dir.svg);
+  margin-bottom: -4px;
+  border: 5.5px solid transparent;
+  border-top: 10px solid #000000;
 }
 
 .go-top {
-  background: url(../img/icon-up-dir.svg);
+  margin-top: -7px;
+  border: 5.5px solid transparent;
+  border-bottom: 10px solid #000000;
 }
 
-.go-bottom:hover,
+.go-bottom:hover {
+  border-top-color: #a6a6a6;
+  opacity: 1;
+}
+
 .go-top:hover {
-  opacity: 0.4;
+  border-bottom-color: #a6a6a6;
+  opacity: 1;
 }
 
 .go-bottom:active,
 .go-top:active,
 .button-active {
   opacity: 1;
+}
+
+.go-bottom:active {
+  border-top-color: #000000;
+}
+
+.go-top:active {
+  border-bottom-color: #000000;
 }
 
 /** Стили галереи inner.html **/
@@ -1329,7 +1349,7 @@ a {
 .sticker button {
   position: absolute;
   bottom: 42px;
-  left: 79px;
+  left: 80px;
   display: block;
   width: 200px;
   padding: 16px 0;
@@ -1339,6 +1359,7 @@ a {
   text-align: center;
   vertical-align: top;
   background-color: #fb565a;
+  border: none;
   border-radius: 2px;
 }
 
@@ -1406,17 +1427,17 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 50px;
   margin-right: 10px;
-  padding: 16px 0;
-  background-color: #eeeeee;
-  border-radius: 2px; 
 }
 
 .page-numbers a {
+  width: 50px;
+  padding: 16px 0;
   line-height: 18px;
   font-weight: 500;
   color: #000000;
+  background-color: #eeeeee;
+  border-radius: 2px; 
   text-transform: uppercase;
   text-align: center;
   vertical-align: middle;
@@ -1435,12 +1456,13 @@ a {
           box-sizing: border-box;
 }
 
-.page-number:hover {
+.page-number a:hover {
   background-color: #dfdfdf;
 }
 
-.page-number:active {
+.page-number a:active {
   padding-top: 13px;
+  color: rgba(0, 0, 0, 0.3);
   background-color: #d5d5d5;
   border-top: 3px #bfbfbf solid;
   -webkit-box-sizing: border-box;
@@ -1449,11 +1471,7 @@ a {
           box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
 }
 
-.page-number:active a {
-  opacity: 0.3;
-}
-
-.page-number:last-child {
+.page-number:last-child a {
   width: 260px;
 }
 
@@ -1551,11 +1569,14 @@ a {
   width: 360px;
   height: 50px;
   line-height: 18px;
+  outline: none;
 }
 
 .login-form textarea {
+  vertical-align: top;
   width: 100%;
   height: 118px;
+  outline: none;
 }
 
 .login-form input[type=text],
@@ -1687,6 +1708,7 @@ a {
 .login-form input[type=email]:invalid,
 .login-form textarea:invalid {
   border-color: #e74246;
+  color: #e74246;
 }
 
 .login-form input[type=text]:invalid::-webkit-input-placeholder,
