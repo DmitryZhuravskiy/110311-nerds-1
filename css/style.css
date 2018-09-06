@@ -131,7 +131,11 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 740px;
+  max-height: 142px;
   padding: 55px 0  0 0;
+  overflow: hidden;
 }
 
 .site-navigation li {
@@ -568,14 +572,17 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  max-width: 1160px;
   height: 182px;
   margin: 0 40px 75px 30px;
   border-top: 2px #eeeeee solid;
   border-bottom: 2px #eeeeee solid;
+  overflow: hidden;
 }
 
 .our-clients a {
   margin-top: 5px;
+  margin-left: 31px;
   opacity: 0.2;
 }
 
@@ -668,19 +675,22 @@ a {
 }
 
 .footer-contacts p {
+  max-height: 37px;
   margin-bottom: 18px;
   line-height: 18px;
   font-weight: 400;
   color: #666666;
+  overflow: hidden;
 }
 
 .footer-contacts a {
-  display: inline-block;
-  vertical-align: top;
-  width: 100%;
+  position: absolute;
+  left: 50px;
+  bottom: 47px;
+  display: block;
+  width: 219px;
   height: auto;
   padding: 16px 0;
-  margin-top: 20px;
   line-height: 18px;
   font-weight: 500;
   text-transform: uppercase;
@@ -733,7 +743,11 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  flex-wrap: wrap;
   width: 400px;
+  max-width: 400px;
+  max-height: 100px;
+  overflow: hidden;
 } 
 
 .social-link {
@@ -748,7 +762,7 @@ a {
           align-items: center;
   width: 78px;
   height: 78px;
-  margin-right: 12px;
+  margin: 10px 12px 10px 0;
   font-size: 0;
   border-radius: 50%;
   background-color: #e1e1e1;
@@ -931,6 +945,12 @@ a {
 }
 
 /** Стили для выбора типа сетки inner.html **/
+
+.web-kind,
+.differences {
+  max-height: 600px;
+  overflow: hidden;
+}
 
 .web-kind,
 .differences,
