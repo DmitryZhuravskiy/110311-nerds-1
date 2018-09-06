@@ -359,6 +359,10 @@ a {
   margin-right: 100px;
 }
 
+.presentation img {
+  margin-right: 20px;
+}
+
 .catalog h3 {
   margin-top: 0;
   margin-bottom: 20px;
