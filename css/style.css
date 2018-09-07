@@ -41,7 +41,7 @@ a {
 .main-header {
   display: block;
   margin: 0 auto;
-  margin-bottom: 82px;
+  margin-bottom: 80px;
   background-color: #eeeeee;
 }
 
@@ -130,7 +130,7 @@ a {
           align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between;
+          justify-content: flex-start;
   flex-wrap: wrap;
   max-width: 740px;
   max-height: 142px;
@@ -139,11 +139,32 @@ a {
 }
 
 .site-navigation li {
-  margin-right: 46px;
+  margin-right: 44px;
 }
 
 .site-navigation li:last-child {
   margin-right: 0;
+}
+
+.site-navigation .studio {
+  padding-left: 1.68px;
+}
+
+.site-navigation .clients {
+  padding-left: 2px;
+  margin-left: -1px;
+}
+
+.site-navigation .shop {
+  margin-right: -3px;
+  padding-left: 3px;
+  letter-spacing: 0.3px;
+}
+
+.site-navigation .contacts {
+  padding-left: 2px;
+  margin-left: -0.61px;
+  letter-spacing: 0.2px;
 }
 
 .user-navigation {
@@ -192,7 +213,7 @@ a {
 .slider-controls {
   position: absolute;
   left: 50%;
-  bottom: 102px;
+  bottom: 104px;
   z-index: 10;
   width: 160px;
   height: 18px;
@@ -234,13 +255,13 @@ a {
 
 .slider-item {
   display: none;
-  padding: 78px 0;
+  padding: 79px 0;
 }
 
 .slider-item:nth-child(1) {
   background-image: url("../img/slide1.png");
   background-repeat: no-repeat;
-  background-position: 93% 18px;
+  background-position: 93.2% 18px;
   -webkit-animation: arrival 0.4s;
           animation: arrival 0.4s;
 }
@@ -248,7 +269,7 @@ a {
 .slider-item:nth-child(2) {
   background-image: url("../img/slide2.png");
   background-repeat: no-repeat;
-  background-position: 100% 0;
+  background-position: 100% 0px;
   -webkit-animation: arrival 0.4s;
           animation: arrival 0.4s;
 }
@@ -292,11 +313,20 @@ a {
 .slider-item h3 {
   max-width: 600px;
   margin: 0;
-  margin-bottom: 27px;
+  margin-bottom: 26px;
   color: #000000;
   font-size: 55px;
   line-height: 55px;
   font-weight: 500;
+}
+
+.slider-item .slider-slogan {
+  margin-top: -1px;
+  letter-spacing: 0.2px;
+}
+
+.slider-slogan span {
+  letter-spacing: 0.8px;
 }
 
 .slider-item p {
@@ -304,6 +334,7 @@ a {
   margin: 0;
   margin-bottom: 38px;
   max-width: 430px;
+  letter-spacing: 0.05px;
 }
 
 .button {
@@ -315,10 +346,17 @@ a {
   line-height: 18px;
   color: #ffffff;
   text-transform: uppercase;
+  letter-spacing: 0.2px;
   text-align: center;
   text-decoration: none;
+  vertical-align: top;
   background-color: #fb565a;
+  border: none;
   border-radius: 2px;
+}
+
+.slider-item-button-3 {
+  margin-top: 39px;
 }
 
 .button:hover,
@@ -355,7 +393,7 @@ a {
 .catalog img {
   width: 300px;
   height: 146px;
-  margin-bottom: 20px;
+  margin-bottom: 19px;
   margin-right: 100px;
 }
 
@@ -365,7 +403,7 @@ a {
 
 .catalog h3 {
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 17px;
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
@@ -377,6 +415,15 @@ a {
   width: 260px;
   margin-top: 0;
   margin-bottom: 32px;
+  letter-spacing: -0.1px;
+}
+
+.attachment p {
+  letter-spacing: 0.2px;
+}
+
+.presentation p {
+  letter-spacing: 0.1px;
 }
 
 .catalog a {
@@ -465,34 +512,39 @@ a {
 }
 
 .about-us-and-logo {
-  height: 265px;
+  height: 260px;
 }
 
 .we-can-and-cool {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  padding-bottom: 50px;
+  padding-bottom: 48px;
 }
 
 .about-us {
   width: 660px;
-} 
+}
+
+.about-us p {
+  letter-spacing: 0.04px;
+}
 
 .about-us b {
   display: block;
-  margin-bottom: 35px;
+  margin-bottom: 33px;
   font-weight: 500;
   font-size: 45px;
   line-height: 45px;
   color: #000000;
+  letter-spacing: 0.1px;
 }
 
 .our-logo {
   display: block;
   width: 360px;
   height: 208px;
-  margin-bottom: 10px;
+  margin-bottom: 13px;
   background: url("../img/nerds-illustration.png") no-repeat;
 }
 
@@ -502,13 +554,15 @@ a {
 
 .we-can h4,
 .how-we-cool h4 {
+  margin-top: 22.8px;
   font-weight: 700;
   text-transform: uppercase;
   color: #000000;
+  letter-spacing: 0.1px;
 }
 
 .we-can h4 {
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 } 
 
 .we-can ul {
@@ -520,6 +574,7 @@ a {
 .we-can li {
   position: relative;
   margin-bottom: 24px;
+  letter-spacing: 0.05px;
 }
 
 .we-can li:before {
@@ -537,12 +592,14 @@ a {
 }
 
 .how-we-cool h4 {
-  margin-bottom: 45px;
+  margin-bottom: 58px;
   text-align: center;
+  letter-spacing: 0.05px;
 }
 
 .how-we-cool th {
   width: 120px;
+  padding-bottom: 23px;
   font-weight: 700;
   font-size: 45px;
   line-height: 10.06px;
@@ -556,7 +613,7 @@ a {
 
 .how-we-cool td {
   width: 120px;
-  padding-top: 15px;
+  padding-top: 14px;
   line-height: 18px;
 }
 
@@ -572,39 +629,61 @@ a {
           flex-direction: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   max-width: 1160px;
-  height: 182px;
-  margin: 0 40px 75px 30px;
+  height: 170px;
+  padding-top: 10px;
+  margin: 0 0 80px 0;
   border-top: 2px #eeeeee solid;
   border-bottom: 2px #eeeeee solid;
   overflow: hidden;
 }
 
 .our-clients a {
-  margin-top: 5px;
-  margin-left: 31px;
+}
+
+.our-clients-link img {
   opacity: 0.2;
 }
 
-.our-clients a:nth-of-type(3) {
-  margin-right: 30px;
-}
-
-.our-clients a:hover {
+.our-clients-link:hover img {
   opacity: 1;
 }
 
-.our-clients a:active {
+.our-clients-link:active img {
   opacity: 0.1;
+}
+
+.htmlacademy {
+  position: relative;
+  padding: 10px 51px 10px 31px;
 }
 
 .htmlacademy img {
   width: 199px;
   height: 68px;
+  margin-bottom: -10px;
+}
+
+.htmlacademy:before,
+.borodinski:before,
+.pink:before {
+  content: "";
+  position: absolute;
+  bottom: 50%;
+  right: -2px;
+  width: 2px;
+  height: 52px;
+  margin-bottom: -26px;
+  background: #eeeeee;
+}
+
+.borodinski {
+  position: relative;
+  padding: 0 46px 0 45px;
 }
 
 .borodinski img {
@@ -612,14 +691,24 @@ a {
   height: 90px;
 }
 
+.pink {
+  position: relative;
+  padding: 0 58px 0 57px;
+}
+
 .pink img {
   width: 185px;
   height: 52px;
 }
 
+.mishka {
+  margin-left: 64px;
+}
+
 .mishka img {
   width: 173px;
   height: 84px;
+  margin-bottom: -3px;
 }
 
 /** Footer **/
@@ -654,23 +743,22 @@ a {
 
 .footer-contacts {
   position: absolute;
-  bottom: 53px;
+  bottom: 54px;
   left: 140px;
   z-index: 12;
   width: 219px;
-  height: 210px;
-  padding: 51px 50px 47px 50px;
+  height: 230px;
+  padding: 31px 50px 47px 50px;
   background-color: #ffffff;
-} 
-  
+}
+
 .footer-contacts h2,
 .footer-contacts p {
   margin: 0;
 }
 
 .footer-contacts h3 {
-  margin-top: -5px;
-  margin-bottom: 22px;
+  margin-bottom: 23px;
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;
@@ -803,6 +891,7 @@ a {
   line-height: 36px;
   font-weight: 700;
   color: #000000;
+  letter-spacing: 0.1px;
 }
 
 .discount-to-friends {
@@ -815,7 +904,7 @@ a {
 .welcome-message {
   display: block;
   margin: 0;
-  padding: 25px 0 50px 0;
+  padding: 23px 0 53px 0;
   font-size: 55px;
   line-height: 55px;
   font-weight: 500;
@@ -838,7 +927,7 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 1160px;
-  margin-top: -45px;
+  margin-top: -47px;
 }
 
 .choice-form {
@@ -862,7 +951,7 @@ a {
 
 .range-filter {
   width: 260px;
-  margin-top: 50px;
+  margin-top: 47px;
 }
 
 .filter-item legend {
@@ -871,6 +960,7 @@ a {
   font-weight: 700;
   color: #000000;
   text-transform: uppercase;
+  letter-spacing: 0.7px;
 }
 
 .range-controls {
@@ -880,13 +970,13 @@ a {
   padding-top: 39px;
   padding-right: 20px;
   padding-left: 20px;
-  background-color: #f1f1f1;
-  border-radius: 5px;
+  background-color: #eeeeee;
+  border-radius: 2px;
 }
 
 .range-controls .scale {
   height: 2px;
-  background: #d7dcde;
+  background-color: #d7dcde;
 }
 
 .range-controls .bar {
@@ -928,6 +1018,7 @@ a {
   display: inline-block;
   vertical-align: top;
   width: 50%;
+  margin-top: 8px;
   font-size: 16px;
   line-height: 22px;
   text-transform: uppercase;
@@ -935,13 +1026,14 @@ a {
 
 .price-controls input {
   vertical-align: top;
-  width: 60px;
-  margin-left: 10px;
-  padding: 8px 10px;
+  width: 80px;
+  margin-left: 13px;
+  margin-top: -8px;
+  padding: 9px 0 10px 0;
   text-align: center;
   background: #f1f1f1;
   border: none;
-  border-radius: 5px;
+  border-radius: 2px;
 }
 
 .max-price {
@@ -1503,7 +1595,7 @@ a {
 
 .modal-content {
   position: fixed;
-  bottom: 185px;
+  bottom: 180px;
   left: calc(50% - 480px);
   z-index: 50;
   display: none;
