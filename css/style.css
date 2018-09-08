@@ -598,7 +598,7 @@ a {
 }
 
 .how-we-cool th {
-  width: 120px;
+  width: 119px;
   padding-bottom: 23px;
   font-weight: 700;
   font-size: 45px;
@@ -608,11 +608,11 @@ a {
 }
 
 .how-we-cool sup {
-  /* font-size: 28px; */
+  font-size: 28px;
 }
 
 .how-we-cool td {
-  width: 120px;
+  width: 119px;
   padding-top: 14px;
   line-height: 18px;
 }
@@ -714,7 +714,7 @@ a {
 /** Footer **/
 
 .page-footer {
-  margin-bottom: 70px;
+  margin-bottom: 65px;
   position: relative;
 }
 
@@ -1063,6 +1063,10 @@ a {
   border: none;
 }
 
+.web-kind {
+  margin-top: 36px;
+}
+
 .differences {
   margin-top: 5px;
 }
@@ -1223,8 +1227,8 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 41px;
-  margin-top: 3px;
+  margin-bottom: 40px;
+  margin-top: 7px;
 }
 
 .sorting ul, 
@@ -1260,6 +1264,7 @@ a {
       -ms-flex-align: center;
           align-items: center;
   list-style-type: none;
+  padding-right: 1px;
 }
 
 .sorting-kind {
@@ -1271,7 +1276,7 @@ a {
 .sorting-kind li {
   margin-right: 26px;
   padding: 0;
-  padding-top: 2px;
+  padding-top: 10px;
 }
 
 .sorting-link {
@@ -1309,19 +1314,22 @@ a {
   margin: 0 0 -2px 18px;
   padding: 0;
   background: #ffffff;
+}
+
+/* Исходный SVG 10x11, расстояние между ними - 18 пикселей  */
+
+.go-bottom {
+  margin-bottom: -8px;
+  border: 5.5px solid transparent;
+  border-top: 10px solid #a6a6a6;
   opacity: 0.2;
 }
 
-.go-bottom {
-  margin-bottom: -4px;
-  border: 5.5px solid transparent;
-  border-top: 10px solid #000000;
-}
-
 .go-top {
-  margin-top: -7px;
+  margin-top: -6px;
   border: 5.5px solid transparent;
-  border-bottom: 10px solid #000000;
+  border-bottom: 10px solid #a6a6a6;
+  opacity: 0.2;
 }
 
 .go-bottom:hover {
@@ -1335,17 +1343,15 @@ a {
 }
 
 .go-bottom:active,
-.go-top:active,
-.button-active {
+.button-active .go-bottom {
+  border-top-color: #231f20;
   opacity: 1;
 }
 
-.go-bottom:active {
-  border-top-color: #000000;
-}
-
-.go-top:active {
-  border-bottom-color: #000000;
+.go-top:active,
+.button-active .go-top {
+  border-bottom-color: #231f20;
+  opacity: 1;
 }
 
 /** Стили галереи inner.html **/
@@ -1365,7 +1371,8 @@ a {
       flex-wrap: wrap;
   width: 760px;
   margin: 0;
-  margin-bottom: 29px;
+  margin-bottom: 28px;
+  margin-top: -1px;
   padding: 0;
   list-style-type: none;
 }
@@ -1375,7 +1382,7 @@ a {
   z-index: 1;
   width: 360px;
   height: 616px;
-  margin-bottom: 32px;
+  margin-bottom: 33px;
   margin-left: 0;
   padding-left: 0;
   padding-top: 40px;
@@ -1431,19 +1438,66 @@ a {
   left: 0;
   display: none;
   width: 210px;
-  height: 170px;
+  height: 169px;
   padding: 10px 75px 50px 75px;
   background-color: #eeeeee;
 }
 
+.description-pink .sticker {
+  width: 230px;
+  padding: 10px 65px 50px 65px;
+}
+
+.description-borodinski .sticker {
+  width: 170px;
+  padding: 9px 95px 50px 95px;
+}
+
+.description-mishka .sticker {
+  width: 150px;
+  padding: 9px 105px 50px 105px;
+}
+
+.description-aplus .sticker {
+  width: 220px;
+  padding: 10px 70px 50px 70px;
+}
+
 .sticker h3 {
-  margin-bottom: 13px;
+  margin-top: 18px;
+  margin-bottom: 14px;
+  margin-left: -1px;
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;
   color: #000000;
   text-align: center;
   text-transform: uppercase;
+}
+
+.description-sedona h3,
+.description-pink h3 {
+  margin-top: 15px;
+  margin-bottom: 16px;
+}
+
+.description-borodinski h3,
+.description-mishka h3 {
+  margin-bottom: 16px;
+}
+
+.description-aplus h3,
+.description-kvast h3 {
+  margin-top: 14px;
+  margin-bottom: 16px;
+}
+
+.description-sedona p {
+  max-width: 178px;
+}
+
+.description-pink p {
+  max-width: 230px;
 }
 
 .product-link {
@@ -1479,6 +1533,16 @@ a {
   border-radius: 2px;
 }
 
+.description-borodinski button,
+.description-mishka button {
+  bottom: 39px;
+}
+
+.description-aplus button,
+.description-kvast button {
+  bottom: 43px;
+}
+
 .sticker a {
   text-align: center;
   vertical-align: middle;
@@ -1495,21 +1559,6 @@ a {
   border-top: 3px #c13135 solid;
   -webkit-box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
           box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
-}
-
-.description-sedona .sticker {
-  width: 200px;
-  padding: 10px 80px 50px 80px;
-}
-
-.description-pink .sticker {
-  width: 240px;
-  padding: 10px 60px 50px 60px;
-}
-
-.description-borodinski .sticker {
-  width: 180px;
-  padding: 10px 90px 50px 90px;
 }
 
 /** Панель навигации по страницам галереи inner.html **/
@@ -1529,7 +1578,7 @@ a {
       -ms-flex-align: center;
           align-items: center;
   margin: 0;
-  margin-bottom: 60px;
+  margin-bottom: 59px;
   padding: 0;
 }
    
@@ -1543,7 +1592,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-right: 10px;
+  margin-right: 11px;
 }
 
 .page-numbers a {
@@ -1611,7 +1660,8 @@ a {
 .modal-content b {
   display: block;
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 42px;
+  margin-top: 2px;
   padding: 0;
   font-size: 45px;
   line-height: 45px;
@@ -1668,7 +1718,7 @@ a {
 .form-text {
   display: block;
   margin: 0;
-  margin-bottom: 11px;
+  margin-bottom: 9px;
   padding: 0;
   line-height: 18px;
   font-weight: 700;
@@ -1676,7 +1726,7 @@ a {
 }
 
 .letter-txt .form-text {
-  margin-top: 32px;
+  margin-top: 33px;
 }
 
 .login-form input[type=text],
@@ -1705,8 +1755,9 @@ a {
 }
 
 .exit {
-  margin-top: 40px;
-  padding: 16px 82px;
+  width: 260px;
+  margin-top: 49px;
+  padding: 16px 0;
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
@@ -1734,7 +1785,7 @@ a {
 
 .login-form input::-webkit-input-placeholder,
 .login-form textarea::-webkit-input-placeholder {
-  padding-left: 15px;
+  padding-left: 14px;
   line-height: 18px;
   color: #000000;
   opacity: 0.5;
@@ -1742,7 +1793,7 @@ a {
 
 .login-form input:-ms-input-placeholder,
 .login-form textarea:-ms-input-placeholder {
-  padding-left: 15px;
+  padding-left: 14px;
   line-height: 18px;
   color: #000000;
   opacity: 0.5;
@@ -1750,7 +1801,7 @@ a {
 
 .login-form input::-ms-input-placeholder,
 .login-form textarea::-ms-input-placeholder {
-  padding-left: 15px;
+  padding-left: 14px;
   line-height: 18px;
   color: #000000;
   opacity: 0.5;
@@ -1758,30 +1809,30 @@ a {
 
 .login-form input::placeholder,
 .login-form textarea::placeholder {
-  padding-left: 15px;
+  padding-left: 14px;
   line-height: 18px;
   color: #000000;
   opacity: 0.5;
 }
 
 .login-form textarea::-webkit-input-placeholder {
-  padding-top: 9px;
-  padding-left: 13px;
+  padding-top: 10px;
+  padding-left: 12px;
 }
 
 .login-form textarea:-ms-input-placeholder {
-  padding-top: 9px;
-  padding-left: 13px;
+  padding-top: 10px;
+  padding-left: 12px;
 }
 
 .login-form textarea::-ms-input-placeholder {
-  padding-top: 9px;
-  padding-left: 13px;
+  padding-top: 10px;
+  padding-left: 12px;
 }
 
 .login-form textarea::placeholder {
-  padding-top: 9px;
-  padding-left: 13px;
+  padding-top: 10px;
+  padding-left: 12px;
 }
 
 .login-form input[type=text]:hover,
