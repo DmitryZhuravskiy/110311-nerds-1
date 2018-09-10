@@ -1014,10 +1014,13 @@ a {
   padding: 23px 0 53px 0;
   font-size: 55px;
   line-height: 55px;
-  font-weight: 500;
   color: #000000;
   text-align: center;
   vertical-align: middle;
+}
+
+.welcome-message b {
+  font-weight: 500;
 }
 
 /** Основное содержание магазина inner.html **/
@@ -1056,11 +1059,6 @@ a {
   border: none;
 }
 
-.range-filter {
-  width: 260px;
-  margin-top: 47px;
-}
-
 .filter-item legend {
   font-size: 18px;
   line-height: 30px;
@@ -1068,6 +1066,11 @@ a {
   color: #000000;
   text-transform: uppercase;
   letter-spacing: 0.7px;
+}
+
+.range-filter {
+  width: 260px;
+  margin-top: 47px;
 }
 
 .range-controls {
@@ -1894,7 +1897,7 @@ a {
 .login-form textarea::-webkit-input-placeholder {
   padding-left: 14px;
   line-height: 18px;
-  color: #000000;
+  color: #444444;
   opacity: 0.5;
 }
 
@@ -1902,7 +1905,15 @@ a {
 .login-form textarea:-ms-input-placeholder {
   padding-left: 14px;
   line-height: 18px;
-  color: #000000;
+  color: #444444;
+  opacity: 0.5;
+}
+
+.login-form input:-moz-focus-inner,
+.login-form textarea:-moz-focus-inner {
+  padding-left: 14px;
+  line-height: 18px;
+  color: #444444;
   opacity: 0.5;
 }
 
@@ -1910,7 +1921,7 @@ a {
 .login-form textarea::-ms-input-placeholder {
   padding-left: 14px;
   line-height: 18px;
-  color: #000000;
+  color: #444444;
   opacity: 0.5;
 }
 
@@ -1918,7 +1929,7 @@ a {
 .login-form textarea::placeholder {
   padding-left: 14px;
   line-height: 18px;
-  color: #000000;
+  color: #444444;
   opacity: 0.5;
 }
 
@@ -1943,9 +1954,37 @@ a {
 }
 
 .login-form input[type=text]:hover,
-.login-form input[type=email]:hover, 
+.login-form input[type=email]:hover,
 .login-form textarea:hover {
   border-color: #b4b9bb;
+}
+
+.login-form input[type=text]:hover::-webkit-input-placeholder,
+.login-form input[type=email]:hover::-webkit-input-placeholder,
+.login-form textarea:hover::-webkit-input-placeholder {
+  color: #444444;
+  opacity: 0.5;
+}
+
+.login-form input[type=text]:hover:-ms-input-placeholder,
+.login-form input[type=email]:hover:-ms-input-placeholder,
+.login-form textarea:hover:-ms-input-placeholder {
+  color: #444444;
+  opacity: 0.5;
+}
+
+.login-form input[type=text]:hover::-ms-input-placeholder,
+.login-form input[type=email]:hover::-ms-input-placeholder,
+.login-form textarea:hover::-ms-input-placeholder {
+  color: #444444;
+  opacity: 0.5;
+}
+
+.login-form input[type=text]:hover::placeholder,
+.login-form input[type=email]:hover::placeholder,
+.login-form textarea:hover::placeholder {
+  color: #444444;
+  opacity: 0.5;
 }
 
 .login-form input[type=text]:focus,
@@ -1957,24 +1996,28 @@ a {
 .login-form input[type=text]:focus::-webkit-input-placeholder,
 .login-form input[type=email]:focus::-webkit-input-placeholder,
 .login-form textarea:focus::-webkit-input-placeholder {
+  color: #444444;
   opacity: 1;
 }
 
 .login-form input[type=text]:focus:-ms-input-placeholder,
 .login-form input[type=email]:focus:-ms-input-placeholder,
 .login-form textarea:focus:-ms-input-placeholder {
+  color: #444444;
   opacity: 1;
 }
 
 .login-form input[type=text]:focus::-ms-input-placeholder,
 .login-form input[type=email]:focus::-ms-input-placeholder,
 .login-form textarea:focus::-ms-input-placeholder {
+  color: #444444;
   opacity: 1;
 }
 
 .login-form input[type=text]:focus::placeholder,
 .login-form input[type=email]:focus::placeholder,
 .login-form textarea:focus::placeholder {
+  color: #444444;
   opacity: 1;
 }
 
@@ -1983,34 +2026,6 @@ a {
 .login-form textarea:invalid {
   border-color: #e74246;
   color: #e74246;
-}
-
-.login-form input[type=text]:invalid::-webkit-input-placeholder,
-.login-form input[type=email]:invalid::-webkit-input-placeholder,
-.login-form textarea:invalid::-webkit-input-placeholder {
-  color: #e74246;
-  opacity: 1;
-}
-
-.login-form input[type=text]:invalid:-ms-input-placeholder,
-.login-form input[type=email]:invalid:-ms-input-placeholder,
-.login-form textarea:invalid:-ms-input-placeholder {
-  color: #e74246;
-  opacity: 1;
-}
-
-.login-form input[type=text]:invalid::-ms-input-placeholder,
-.login-form input[type=email]:invalid::-ms-input-placeholder,
-.login-form textarea:invalid::-ms-input-placeholder {
-  color: #e74246;
-  opacity: 1;
-}
-
-.login-form input[type=text]:invalid::placeholder,
-.login-form input[type=email]:invalid::placeholder,
-.login-form textarea:invalid::placeholder {
-  color: #e74246;
-  opacity: 1;
 }
 
 .overlay {
