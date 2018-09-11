@@ -109,6 +109,7 @@ a {
 
 .site-navigation .active,
 .user-navigation .active {
+  padding-top: 2px;
   border-bottom: 2px #fb565a solid;
 }
 
@@ -131,39 +132,32 @@ a {
           align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: flex-start;
-  max-width: 740px;
-  padding: 55px 0  0 0;
+          justify-content: space-between;
+  min-width: 440px;
+  max-width: 700px;
+  padding: 55px 0  0 0px;
   overflow: hidden;
 }
 
 .site-navigation li {
   margin-right: 44px;
+  border-radius: 2px;
+}
+
+.site-navigation li:nth-of-type(1) {
+  margin-left: 1px;
+}
+
+.site-navigation li:nth-of-type(2) {
+  margin-left: 2px;
+}
+
+.site-navigation li:nth-of-type(3) {
+  margin-left: 4px;
 }
 
 .site-navigation li:last-child {
   margin-right: 0;
-}
-
-.site-navigation .studio {
-  padding-left: 1.68px;
-}
-
-.site-navigation .clients {
-  padding-left: 2px;
-  margin-left: -1px;
-}
-
-.site-navigation .shop {
-  margin-right: -3px;
-  padding-left: 3px;
-  letter-spacing: 0.3px;
-}
-
-.site-navigation .contacts {
-  padding-left: 2px;
-  margin-left: -0.61px;
-  letter-spacing: 0.2px;
 }
 
 .user-navigation {
@@ -202,7 +196,7 @@ a {
   background-image: url("../img/cart-icon.svg");
 }
 
-/** Cлайдера в index.html **/
+/** Cлайдер в index.html **/
 
 .slider {
   position: relative;
@@ -279,110 +273,6 @@ a {
   background-position: 100% 20px;
   -webkit-animation: arrival 0.4s;
           animation: arrival 0.4s;
-}
-
-.site-navigation a:active,
-.user-navigation a:active {
-  color: #000000;
-  opacity: 0.3;
-} 
-
-.site-navigation .active,
-.user-navigation .active {
-  border-bottom: 2px #fb565a solid;
-}
-
-.index-logo {
-  display: block;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-}
-
-.site-navigation {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: flex-start;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  max-width: 740px;
-  max-height: 142px;
-  padding: 55px 0  0 0;
-  overflow: hidden;
-}
-
-.site-navigation li {
-  margin-right: 44px;
-}
-
-.site-navigation li:last-child {
-  margin-right: 0;
-}
-
-.site-navigation .studio {
-  padding-left: 1.68px;
-}
-
-.site-navigation .clients {
-  padding-left: 2px;
-  margin-left: -1px;
-}
-
-.site-navigation .shop {
-  margin-right: -3px;
-  padding-left: 3px;
-  letter-spacing: 0.3px;
-}
-
-.site-navigation .contacts {
-  padding-left: 2px;
-  margin-left: -0.61px;
-  letter-spacing: 0.2px;
-}
-
-.user-navigation {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -ms-flex-item-align: center;
-      align-self: center;
-  width: 160px;
-}
-
-.user-navigation .login-link {
-  display: block;
-  position: relative;
-  padding-left: 39px;
-}
-
-.basket-link {
-  position: relative;
-}
-
-.basket-link:before {
-  content: "";
-  position: absolute;
-  top: 12px;
-  right: 100px;
-  width: 15px;
-  height: 15px;
-  background-image: url("../img/cart-icon.svg");
 }
 
 .product-1:checked ~ .slider-list .slider-item:nth-child(1) {
