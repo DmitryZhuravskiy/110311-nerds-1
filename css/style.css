@@ -1746,6 +1746,7 @@ a {
   min-height: 118px;
   padding: 13px;
   padding-top: 11.5px;
+  resize: none;
   outline: none;
 }
 
