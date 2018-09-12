@@ -632,7 +632,7 @@ a {
   margin: 0 0 80px 0;
   border-top: 2px #eeeeee solid;
   border-bottom: 2px #eeeeee solid;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .our-clients a {
@@ -860,11 +860,11 @@ a {
 }
 
 .social-link:hover {
-  background-color: #fb565a;
+  background-color: #e74246;
 }
 
 .social-link:active {
-  background-color: #d6494d;
+  background-color: #d7373b;
   -webkit-box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
           box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
 }
